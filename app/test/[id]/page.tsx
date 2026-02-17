@@ -36,7 +36,7 @@ export default function QuizPage() {
 
   if (isFinished) {
     return (
-      <main className="max-w-md mx-auto min-h-screen bg-background p-6">
+      <main className="max-w-3xl mx-auto min-h-screen bg-background p-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -87,7 +87,7 @@ export default function QuizPage() {
   const progress = ((currentStep + 1) / quiz.questions.length) * 100;
 
   return (
-    <main className="max-w-md mx-auto min-h-screen bg-background">
+    <main className="max-w-3xl mx-auto min-h-screen bg-background">
       <div className="p-6">
         <button onClick={() => router.back()} className="p-2 -ml-2 text-gray-400">
           <ChevronLeft className="w-6 h-6" />

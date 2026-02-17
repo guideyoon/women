@@ -45,18 +45,19 @@ export default function QuizPage() {
           <div className="text-center space-y-2">
             <span className="text-primary font-bold">진단 결과</span>
             <h1 className="text-3xl font-extrabold text-gray-800">{result.title}</h1>
+            <p className="text-lg font-bold text-gray-500">내 점수: {totalScore}점</p>
           </div>
 
           <div className="bg-white rounded-3xl p-8 border border-secondary card-shadow space-y-6">
             <p className="text-gray-600 leading-relaxed text-lg">
               {result.content}
             </p>
-            
+
             <div className="bg-pink-50 rounded-2xl p-5 border border-pink-100">
               <h3 className="font-bold text-primary flex items-center gap-2 mb-2">
                 <CheckCircle2 className="w-5 h-5" /> 추천 관리 팁
               </h3>
-              <p className="text-sm text-gray-700">{result.recommendation}</p>
+              <p className="text-sm text-gray-700 whitespace-pre-line">{result.recommendation}</p>
             </div>
           </div>
 
@@ -72,7 +73,7 @@ export default function QuizPage() {
             </button>
           </div>
 
-          <button 
+          <button
             onClick={() => router.push('/')}
             className="w-full text-gray-400 font-medium py-4"
           >
@@ -95,8 +96,8 @@ export default function QuizPage() {
 
         <div className="mt-6 space-y-2">
           <div className="w-full h-2 bg-secondary rounded-full overflow-hidden">
-            <motion.div 
-              className="h-full bg-primary" 
+            <motion.div
+              className="h-full bg-primary"
               initial={{ width: 0 }}
               animate={{ width: `${progress}%` }}
             />

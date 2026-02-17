@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ChevronRight, Sparkles, Heart, Activity, Calculator, Moon, HeartHandshake } from "lucide-react";
+import { ChevronRight, Sparkles, Heart, Activity, Calculator, Moon, HeartHandshake, Stethoscope, Baby, Dumbbell, Shield, Apple } from "lucide-react";
 import { merchants } from "@/constants/merchants";
 
 export default function Home() {
@@ -63,6 +63,41 @@ export default function Home() {
       desc: "연인과의 심리적 궁합은?",
       icon: <Sparkles className="w-6 h-6 text-violet-400" />,
       color: "bg-violet-50",
+    },
+    {
+      id: "vaginal-health",
+      title: "질 건강 자가 진단",
+      desc: "여성 건강의 핵심을 체크하세요",
+      icon: <Stethoscope className="w-6 h-6 text-red-400" />,
+      color: "bg-red-50",
+    },
+    {
+      id: "postpartum",
+      title: "산후 회복 체크",
+      desc: "출산 후 회복 상태를 확인해요",
+      icon: <Baby className="w-6 h-6 text-teal-400" />,
+      color: "bg-teal-50",
+    },
+    {
+      id: "bodyline",
+      title: "바디라인 고민 진단",
+      desc: "나만의 바디 맞춤 솔루션은?",
+      icon: <Dumbbell className="w-6 h-6 text-orange-400" />,
+      color: "bg-orange-50",
+    },
+    {
+      id: "skin-barrier",
+      title: "피부 장벽 건강 테스트",
+      desc: "민감한 피부 상태를 진단하세요",
+      icon: <Shield className="w-6 h-6 text-sky-400" />,
+      color: "bg-sky-50",
+    },
+    {
+      id: "inner-beauty",
+      title: "이너뷰티 점수 테스트",
+      desc: "내면의 아름다움을 측정해요",
+      icon: <Apple className="w-6 h-6 text-emerald-400" />,
+      color: "bg-emerald-50",
     },
   ];
 

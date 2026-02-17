@@ -968,5 +968,826 @@ export const QUIZ_DATA = {
         }
       }
     ]
+  },
+  "vaginal-health": {
+    title: "질 건강 자가 진단",
+    description: "여성 건강의 핵심, 질 건강 상태를 10가지 항목으로 체크해 보세요.",
+    questions: [
+      {
+        id: 1,
+        question: "질 분비물의 양이나 색이 평소와 다르다고 느끼시나요?",
+        icon: "Droplets",
+        options: [
+          { text: "정상 범위이다", score: 0 },
+          { text: "가끔 다르게 느낀다", score: 1 },
+          { text: "자주 변화가 있다", score: 2 },
+          { text: "냄새나 색이 확연히 다르다", score: 3 },
+        ],
+      },
+      {
+        id: 2,
+        question: "질 부위에 가려움이나 따가움을 느끼시나요?",
+        icon: "Flame",
+        options: [
+          { text: "전혀 없다", score: 0 },
+          { text: "가끔 느낀다", score: 1 },
+          { text: "자주 느낀다", score: 2 },
+          { text: "일상생활에 지장이 있을 정도다", score: 3 },
+        ],
+      },
+      {
+        id: 3,
+        question: "질 건조함을 느끼시나요?",
+        icon: "Wind",
+        options: [
+          { text: "전혀 느끼지 않는다", score: 0 },
+          { text: "약간 건조한 편이다", score: 1 },
+          { text: "자주 건조함을 느낀다", score: 2 },
+          { text: "심한 건조함으로 불편하다", score: 3 },
+        ],
+      },
+      {
+        id: 4,
+        question: "관계 시 통증이나 불편함을 느끼시나요?",
+        icon: "HeartPulse",
+        options: [
+          { text: "전혀 없다", score: 0 },
+          { text: "가끔 불편하다", score: 1 },
+          { text: "자주 통증이 있다", score: 2 },
+          { text: "통증 때문에 관계를 피하게 된다", score: 3 },
+        ],
+      },
+      {
+        id: 5,
+        question: "소변 시 불편함이나 잔뇨감이 있나요?",
+        options: [
+          { text: "전혀 없다", score: 0 },
+          { text: "가끔 그렇다", score: 1 },
+          { text: "자주 느낀다", score: 2 },
+          { text: "매번 불편하다", score: 3 },
+        ],
+      },
+      {
+        id: 6,
+        question: "질 부위에서 평소와 다른 냄새가 나나요?",
+        options: [
+          { text: "전혀 없다", score: 0 },
+          { text: "가끔 느낀다", score: 1 },
+          { text: "자주 신경 쓰인다", score: 2 },
+          { text: "사회생활에 지장이 있다", score: 3 },
+        ],
+      },
+      {
+        id: 7,
+        question: "생리 후 질 상태 회복이 어떤 편인가요?",
+        icon: "Calendar",
+        options: [
+          { text: "빠르게 정상으로 돌아온다", score: 0 },
+          { text: "며칠 정도 걸린다", score: 1 },
+          { text: "회복이 느린 편이다", score: 2 },
+          { text: "다음 생리까지 불편함이 지속된다", score: 3 },
+        ],
+      },
+      {
+        id: 8,
+        question: "질 탄력이 예전과 다르다고 느끼시나요?",
+        options: [
+          { text: "변화 없다", score: 0 },
+          { text: "약간 느슨해진 느낌이다", score: 1 },
+          { text: "확실히 달라졌다", score: 2 },
+          { text: "많이 약해진 것 같다", score: 3 },
+        ],
+      },
+      {
+        id: 9,
+        question: "질 건강을 위한 관리를 하고 계시나요?",
+        options: [
+          { text: "정기적으로 관리한다", score: 0 },
+          { text: "가끔 신경 쓴다", score: 1 },
+          { text: "거의 관리하지 않는다", score: 2 },
+          { text: "관리 방법을 모른다", score: 3 },
+        ],
+      },
+      {
+        id: 10,
+        question: "산부인과 정기 검진을 받고 계시나요?",
+        options: [
+          { text: "1년에 1회 이상 받는다", score: 0 },
+          { text: "2~3년에 1회 정도", score: 1 },
+          { text: "오래전에 마지막으로 받았다", score: 2 },
+          { text: "받아본 적 없다", score: 3 },
+        ],
+      },
+    ],
+    results: [
+      {
+        minScore: 0,
+        maxScore: 7,
+        title: "🟢 건강한 상태",
+        content: "현재 질 건강이 양호한 상태입니다! 지금의 좋은 상태를 유지하면서 예방 관리를 해주시면 더욱 좋습니다.",
+        recommendation: "매일 적절한 위생 관리와 통기성 좋은 속옷 착용, 규칙적인 산부인과 검진을 유지해 주세요. 질 유산균 섭취도 도움이 됩니다.",
+        product: {
+          name: "여궁화이트",
+          desc: "밝고 환한 자신감을 위한 화이트닝 케어",
+          cta: "지금 확인하기",
+          url: "https://replyalba.com/pt/SNLg3ILPbd",
+        }
+      },
+      {
+        minScore: 8,
+        maxScore: 14,
+        title: "🟡 초기 관리 필요",
+        content: "가벼운 불편함이 나타나기 시작했어요. 지금부터 적극적인 관리를 시작하면 좋은 결과를 얻을 수 있습니다.",
+        recommendation: "질 건조함과 가려움에 도움이 되는 전문 케어 제품을 사용해 보세요. 자극적인 세정제 사용을 줄이고, 면 소재 속옷을 착용해 주세요.",
+        product: {
+          name: "여궁닥터",
+          desc: "민감한 부위의 냄새와 가려움을 말끔하게",
+          cta: "솔루션 확인하기",
+          url: "https://replyalba.com/pt/IlnAem4ygW",
+        }
+      },
+      {
+        minScore: 15,
+        maxScore: 22,
+        title: "🟠 적극 관리 필요",
+        content: "여러 가지 불편한 증상이 나타나고 있어요. 체계적인 관리와 전문 제품 사용을 적극 권장합니다.",
+        recommendation: "전문적인 질 건강 관리 프로그램을 시작해 보세요. 골반 근육 강화 운동(케겔 운동)과 함께 영양 보충도 중요합니다.",
+        product: {
+          name: "여궁골드",
+          desc: "여성 생애 주기별 맞춤 솔루션 제공",
+          cta: "맞춤 솔루션 보기",
+          url: "https://replyalba.com/pt/Z1IJI9rY2c",
+        }
+      },
+      {
+        minScore: 23,
+        maxScore: 30,
+        title: "🔴 전문 상담 권장",
+        content: "질 건강에 상당한 불편함이 있는 상태입니다. 전문적인 케어와 함께 산부인과 상담을 받아보시길 권합니다.",
+        recommendation: "산부인과 전문 상담을 통해 정확한 진단을 받으시고, 맞춤형 집중 케어 프로그램을 시작해 보세요. 일상 속 관리도 함께 병행해 주세요.",
+        product: {
+          name: "미즈케어 여궁",
+          desc: "질 건강과 수축력을 동시에 집중 케어",
+          cta: "집중 케어 시작하기",
+          url: "https://replyalba.com/pt/WeWtmEo70h",
+        }
+      }
+    ]
+  },
+  "postpartum": {
+    title: "산후 회복 체크",
+    description: "출산 후 나의 몸은 얼마나 회복되었을까요? 10가지 항목으로 체크해 보세요.",
+    questions: [
+      {
+        id: 1,
+        question: "출산 후 골반 근육 운동(케겔 운동)을 하고 계시나요?",
+        icon: "Accessibility",
+        options: [
+          { text: "매일 꾸준히 하고 있다", score: 0 },
+          { text: "가끔 한다", score: 1 },
+          { text: "거의 하지 않는다", score: 2 },
+          { text: "방법을 모른다", score: 3 },
+        ],
+      },
+      {
+        id: 2,
+        question: "기침이나 재채기 시 요실금 증상이 있나요?",
+        icon: "Droplets",
+        options: [
+          { text: "전혀 없다", score: 0 },
+          { text: "아주 가끔 있다", score: 1 },
+          { text: "자주 경험한다", score: 2 },
+          { text: "일상생활에 지장이 있다", score: 3 },
+        ],
+      },
+      {
+        id: 3,
+        question: "체중이 출산 전으로 돌아갔나요?",
+        options: [
+          { text: "거의 돌아왔다", score: 0 },
+          { text: "3~5kg 정도 더 나간다", score: 1 },
+          { text: "5~10kg 정도 더 나간다", score: 2 },
+          { text: "10kg 이상 더 나간다", score: 3 },
+        ],
+      },
+      {
+        id: 4,
+        question: "산후 우울감이나 감정 기복을 느끼시나요?",
+        icon: "Brain",
+        options: [
+          { text: "거의 느끼지 않는다", score: 0 },
+          { text: "가끔 우울하다", score: 1 },
+          { text: "자주 감정 기복이 있다", score: 2 },
+          { text: "심한 우울감을 느낀다", score: 3 },
+        ],
+      },
+      {
+        id: 5,
+        question: "수면의 질은 어떤가요?",
+        icon: "Moon",
+        options: [
+          { text: "충분히 잘 자고 있다", score: 0 },
+          { text: "육아로 가끔 수면 부족이다", score: 1 },
+          { text: "만성적으로 수면이 부족하다", score: 2 },
+          { text: "심한 불면이나 수면 장애가 있다", score: 3 },
+        ],
+      },
+      {
+        id: 6,
+        question: "산후 탈모를 경험하고 계시나요?",
+        options: [
+          { text: "전혀 없다", score: 0 },
+          { text: "약간 빠지는 편이다", score: 1 },
+          { text: "눈에 띄게 빠진다", score: 2 },
+          { text: "심한 탈모가 진행 중이다", score: 3 },
+        ],
+      },
+      {
+        id: 7,
+        question: "허리나 골반 통증이 있나요?",
+        options: [
+          { text: "전혀 없다", score: 0 },
+          { text: "가끔 불편하다", score: 1 },
+          { text: "자주 통증을 느낀다", score: 2 },
+          { text: "만성적인 통증이 있다", score: 3 },
+        ],
+      },
+      {
+        id: 8,
+        question: "관계 시 불편함이나 통증을 느끼시나요?",
+        icon: "HeartPulse",
+        options: [
+          { text: "전혀 없다", score: 0 },
+          { text: "약간 불편하다", score: 1 },
+          { text: "통증이 있다", score: 2 },
+          { text: "관계 자체가 어렵다", score: 3 },
+        ],
+      },
+      {
+        id: 9,
+        question: "전반적인 체력은 어느 정도 회복되었나요?",
+        icon: "BatteryLow",
+        options: [
+          { text: "출산 전과 비슷하다", score: 0 },
+          { text: "70~80% 정도 회복됐다", score: 1 },
+          { text: "50% 정도 회복됐다", score: 2 },
+          { text: "체력이 많이 떨어졌다", score: 3 },
+        ],
+      },
+      {
+        id: 10,
+        question: "산후 전문 관리를 받고 계시나요?",
+        options: [
+          { text: "정기적으로 받고 있다", score: 0 },
+          { text: "가끔 받는다", score: 1 },
+          { text: "거의 받지 않는다", score: 2 },
+          { text: "받아본 적 없다", score: 3 },
+        ],
+      },
+    ],
+    results: [
+      {
+        minScore: 0,
+        maxScore: 7,
+        title: "🟢 회복 우수",
+        content: "산후 회복이 잘 진행되고 있어요! 꾸준한 관리로 건강한 일상을 유지하고 계시네요.",
+        recommendation: "지금의 좋은 상태를 유지하세요. 골반 근육 운동을 꾸준히 하고, 균형 잡힌 영양 섭취를 계속해 주세요.",
+        product: {
+          name: "미즈케어 솔루션 5",
+          desc: "행복한 부부생활을 위한 최상의 선택",
+          cta: "지금 확인하기",
+          url: "https://replyalba.com/pt/Phjrq2zsy8",
+        }
+      },
+      {
+        minScore: 8,
+        maxScore: 14,
+        title: "🟡 추가 관리 필요",
+        content: "회복이 진행 중이지만 몇 가지 부분에서 추가 관리가 필요해요. 적극적인 케어를 시작해 보세요.",
+        recommendation: "골반 근육 강화 운동을 매일 실천하고, 단백질과 철분이 풍부한 식단을 유지하세요. 충분한 휴식도 중요합니다.",
+        product: {
+          name: "베리얀",
+          desc: "집에서 간편하게 하는 여성 근육 강화 운동",
+          cta: "솔루션 확인하기",
+          url: "https://replyalba.com/pt/NGi7kc77mF",
+        }
+      },
+      {
+        minScore: 15,
+        maxScore: 22,
+        title: "🟠 집중 회복 필요",
+        content: "산후 회복이 더딘 상태입니다. 체계적인 관리 프로그램을 시작하시길 권합니다.",
+        recommendation: "전문 산후 관리 프로그램을 통해 골반, 체력, 정서적 회복을 동시에 진행해 보세요. 무리하지 말고 점진적으로 관리해 주세요.",
+        product: {
+          name: "미즈케어 솔루션 6",
+          desc: "출산 후 늘어진 근육, 다시 탄탄하게",
+          cta: "집중 케어 시작하기",
+          url: "https://replyalba.com/pt/MbTJlgNLg8",
+        }
+      },
+      {
+        minScore: 23,
+        maxScore: 30,
+        title: "🔴 전문 상담 권장",
+        content: "산후 회복에 상당한 어려움을 겪고 계시네요. 전문적인 도움이 필요한 시점입니다.",
+        recommendation: "산부인과 및 산후 전문 클리닉 상담을 받아보세요. 요실금, 골반 통증 등은 전문 치료로 크게 개선될 수 있습니다. 정서적 지원도 함께 받으시길 권합니다.",
+        product: {
+          name: "미즈케어 솔루션 2",
+          desc: "부부관계 개선, 다시 시작하는 신혼 라이프",
+          cta: "전문 상담 받기",
+          url: "https://replyalba.com/pt/Y1PHVwO7GO",
+        }
+      }
+    ]
+  },
+  "bodyline": {
+    title: "바디라인 고민 진단",
+    description: "나의 바디라인 고민을 정밀 분석하여 맞춤 솔루션을 알려드려요.",
+    questions: [
+      {
+        id: 1,
+        question: "현재 가장 신경 쓰이는 바디라인 부위는?",
+        icon: "Accessibility",
+        options: [
+          { text: "특별히 없다", score: 0 },
+          { text: "한 부위 정도 신경 쓰인다", score: 1 },
+          { text: "여러 부위가 고민이다", score: 2 },
+          { text: "전체적으로 불만족이다", score: 3 },
+        ],
+      },
+      {
+        id: 2,
+        question: "규칙적인 운동을 하고 계시나요?",
+        options: [
+          { text: "주 3회 이상 운동한다", score: 0 },
+          { text: "주 1~2회 운동한다", score: 1 },
+          { text: "거의 운동하지 않는다", score: 2 },
+          { text: "전혀 하지 않는다", score: 3 },
+        ],
+      },
+      {
+        id: 3,
+        question: "최근 6개월간 체중 변화가 있었나요?",
+        options: [
+          { text: "변화 없다", score: 0 },
+          { text: "2~3kg 정도 변했다", score: 1 },
+          { text: "5kg 이상 변했다", score: 2 },
+          { text: "10kg 이상 변했다", score: 3 },
+        ],
+      },
+      {
+        id: 4,
+        question: "피부 탄력 상태는 어떤가요?",
+        icon: "Sparkles",
+        options: [
+          { text: "탄력이 좋은 편이다", score: 0 },
+          { text: "약간 처진 느낌이 있다", score: 1 },
+          { text: "눈에 띄게 탄력이 떨어졌다", score: 2 },
+          { text: "많이 처졌다", score: 3 },
+        ],
+      },
+      {
+        id: 5,
+        question: "식단 관리를 하고 계시나요?",
+        options: [
+          { text: "체계적으로 관리하고 있다", score: 0 },
+          { text: "어느 정도 신경 쓴다", score: 1 },
+          { text: "거의 신경 쓰지 않는다", score: 2 },
+          { text: "불규칙하고 과식하는 편이다", score: 3 },
+        ],
+      },
+      {
+        id: 6,
+        question: "셀룰라이트가 신경 쓰이시나요?",
+        options: [
+          { text: "거의 없다", score: 0 },
+          { text: "약간 있는 편이다", score: 1 },
+          { text: "눈에 띄게 있다", score: 2 },
+          { text: "넓은 부위에 심하게 있다", score: 3 },
+        ],
+      },
+      {
+        id: 7,
+        question: "옷을 입을 때 체형에 대한 자신감은?",
+        options: [
+          { text: "자신 있다", score: 0 },
+          { text: "보통이다", score: 1 },
+          { text: "신경 쓰이는 편이다", score: 2 },
+          { text: "옷 선택이 매우 제한적이다", score: 3 },
+        ],
+      },
+      {
+        id: 8,
+        question: "바디라인 관리 제품이나 시술 경험이 있나요?",
+        options: [
+          { text: "꾸준히 관리하고 있다", score: 0 },
+          { text: "몇 번 해봤다", score: 1 },
+          { text: "관심은 있지만 해본 적 없다", score: 2 },
+          { text: "어떤 것이 있는지 모른다", score: 3 },
+        ],
+      },
+      {
+        id: 9,
+        question: "출산이나 노화로 인한 체형 변화가 있나요?",
+        options: [
+          { text: "변화가 거의 없다", score: 0 },
+          { text: "약간의 변화가 있다", score: 1 },
+          { text: "상당한 변화가 있다", score: 2 },
+          { text: "체형이 크게 변했다", score: 3 },
+        ],
+      },
+      {
+        id: 10,
+        question: "하루 평균 활동량은 어느 정도인가요?",
+        options: [
+          { text: "활발하게 움직인다", score: 0 },
+          { text: "보통이다", score: 1 },
+          { text: "앉아있는 시간이 많다", score: 2 },
+          { text: "거의 움직이지 않는다", score: 3 },
+        ],
+      },
+    ],
+    results: [
+      {
+        minScore: 0,
+        maxScore: 7,
+        title: "🟢 자신감 넘치는 바디",
+        content: "바디라인 관리를 잘 하고 계시네요! 현재의 좋은 컨디션을 유지하면서 더욱 아름다운 라인을 만들어 보세요.",
+        recommendation: "균형 잡힌 운동과 식단을 유지하시고, 보디 케어 제품으로 피부 탄력까지 관리해 보세요.",
+        product: {
+          name: "바스트핏 솔루션",
+          desc: "자연스럽게 차오르는 바스트 볼륨 자신감",
+          cta: "지금 확인하기",
+          url: "https://replyalba.com/pt/MNGGagfIeF",
+        }
+      },
+      {
+        minScore: 8,
+        maxScore: 14,
+        title: "🟡 가벼운 관리 시작",
+        content: "약간의 바디라인 고민이 있지만, 지금부터 관리를 시작하면 충분히 개선할 수 있어요!",
+        recommendation: "주 3회 이상 유산소와 근력 운동을 병행하고, 집중 관리가 필요한 부위에 전문 바디 케어 제품을 사용해 보세요.",
+        product: {
+          name: "올리모아",
+          desc: "흐트러진 바디라인을 살려주는 집중 솔루션",
+          cta: "솔루션 확인하기",
+          url: "https://replyalba.com/pt/C7qCzRVOZ8",
+        }
+      },
+      {
+        minScore: 15,
+        maxScore: 22,
+        title: "🟠 집중 관리 필요",
+        content: "바디라인에 꽤 많은 고민을 가지고 계시네요. 체계적인 바디 관리 프로그램이 필요한 시점입니다.",
+        recommendation: "전문 바디 관리 프로그램을 시작해 보세요. 식단 조절과 운동, 전문 제품 사용을 함께 병행하면 효과적입니다.",
+        product: {
+          name: "올리모아 2",
+          desc: "아름다운 몸매를 위한 스마트한 선택",
+          cta: "집중 케어 시작하기",
+          url: "https://replyalba.com/pt/yN552PODWx",
+        }
+      },
+      {
+        minScore: 23,
+        maxScore: 30,
+        title: "🔴 전문 솔루션 필요",
+        content: "바디라인에 대한 고민이 큰 상태입니다. 전문적이고 체계적인 관리를 시작해 보세요.",
+        recommendation: "전문가 상담을 통해 나에게 맞는 바디 관리 프로그램을 설계하세요. 꾸준한 관리가 가장 중요합니다.",
+        product: {
+          name: "우먼시크릿",
+          desc: "사랑받는 여자의 비밀, 지금 공개합니다",
+          cta: "전문 솔루션 보기",
+          url: "https://replyalba.com/pt/YfcVFCdD21",
+        }
+      }
+    ]
+  },
+  "skin-barrier": {
+    title: "피부 장벽 건강 테스트",
+    description: "민감하고 약해진 피부, 장벽 건강 상태를 정밀 진단해 보세요.",
+    questions: [
+      {
+        id: 1,
+        question: "세안 후 피부가 당기는 정도는 어떤가요?",
+        icon: "Droplets",
+        options: [
+          { text: "전혀 당기지 않는다", score: 0 },
+          { text: "약간 당기는 편이다", score: 1 },
+          { text: "꽤 당기고 건조하다", score: 2 },
+          { text: "심하게 당기고 따갑다", score: 3 },
+        ],
+      },
+      {
+        id: 2,
+        question: "새로운 화장품을 사용할 때 자극을 느끼나요?",
+        icon: "Flame",
+        options: [
+          { text: "거의 자극없이 잘 맞는다", score: 0 },
+          { text: "가끔 따끔거린다", score: 1 },
+          { text: "자주 자극을 느낀다", score: 2 },
+          { text: "대부분의 제품이 자극적이다", score: 3 },
+        ],
+      },
+      {
+        id: 3,
+        question: "환절기에 피부 트러블이 심해지나요?",
+        icon: "Wind",
+        options: [
+          { text: "별다른 변화가 없다", score: 0 },
+          { text: "약간 민감해진다", score: 1 },
+          { text: "트러블이 자주 생긴다", score: 2 },
+          { text: "피부 상태가 크게 나빠진다", score: 3 },
+        ],
+      },
+      {
+        id: 4,
+        question: "얼굴에 붉은기나 열감이 있나요?",
+        options: [
+          { text: "전혀 없다", score: 0 },
+          { text: "가끔 붉어진다", score: 1 },
+          { text: "자주 붉은기가 있다", score: 2 },
+          { text: "항상 붉고 열감이 있다", score: 3 },
+        ],
+      },
+      {
+        id: 5,
+        question: "피부가 가렵거나 따가운 적이 자주 있나요?",
+        options: [
+          { text: "전혀 없다", score: 0 },
+          { text: "가끔 그렇다", score: 1 },
+          { text: "자주 그렇다", score: 2 },
+          { text: "거의 매일 그렇다", score: 3 },
+        ],
+      },
+      {
+        id: 6,
+        question: "보습제를 바른 후에도 피부가 건조한가요?",
+        options: [
+          { text: "보습이 오래 유지된다", score: 0 },
+          { text: "몇 시간 후 건조해진다", score: 1 },
+          { text: "금방 건조해진다", score: 2 },
+          { text: "보습제를 발라도 건조하다", score: 3 },
+        ],
+      },
+      {
+        id: 7,
+        question: "자외선 노출 후 피부 반응은?",
+        options: [
+          { text: "별다른 반응이 없다", score: 0 },
+          { text: "약간 붉어진다", score: 1 },
+          { text: "쉽게 타고 자극을 받는다", score: 2 },
+          { text: "심하게 반응하고 회복이 느리다", score: 3 },
+        ],
+      },
+      {
+        id: 8,
+        question: "피부결이 거칠거나 각질이 일어나나요?",
+        options: [
+          { text: "매끈한 편이다", score: 0 },
+          { text: "가끔 각질이 있다", score: 1 },
+          { text: "자주 거칠고 각질이 있다", score: 2 },
+          { text: "항상 거칠고 각질이 심하다", score: 3 },
+        ],
+      },
+      {
+        id: 9,
+        question: "화장(메이크업)이 잘 먹나요?",
+        icon: "Sparkles",
+        options: [
+          { text: "잘 먹고 오래 유지된다", score: 0 },
+          { text: "보통이다", score: 1 },
+          { text: "잘 안 먹고 들뜬다", score: 2 },
+          { text: "화장이 거의 안 먹는다", score: 3 },
+        ],
+      },
+      {
+        id: 10,
+        question: "피부 트러블 후 회복 속도는?",
+        options: [
+          { text: "빠르게 회복된다", score: 0 },
+          { text: "보통이다", score: 1 },
+          { text: "느린 편이다", score: 2 },
+          { text: "흉터나 자국이 오래 남는다", score: 3 },
+        ],
+      },
+    ],
+    results: [
+      {
+        minScore: 0,
+        maxScore: 7,
+        title: "🟢 건강한 피부 장벽",
+        content: "피부 장벽이 건강한 상태입니다! 현재의 좋은 컨디션을 유지하면서 예방 관리를 해주세요.",
+        recommendation: "자극적인 성분을 피하고, 꾸준한 보습과 자외선 차단으로 피부 장벽을 보호해 주세요.",
+        product: {
+          name: "스템벨",
+          desc: "인체 줄기세포 배양액으로 되찾는 자생력",
+          cta: "지금 확인하기",
+          url: "https://replyalba.com/pt/yBXZ7Kddui",
+        }
+      },
+      {
+        minScore: 8,
+        maxScore: 14,
+        title: "🟡 장벽 관리 시작",
+        content: "피부 장벽이 약간 약해진 상태예요. 지금부터 집중 보습과 장벽 강화 케어를 시작해 보세요.",
+        recommendation: "세라마이드, 히알루론산 등 장벽 강화 성분이 들어간 제품을 사용하고, 과도한 각질 제거는 피해 주세요.",
+        product: {
+          name: "천수윤진",
+          desc: "국내 최초 '녹용 줄기세포 배양액' 함유 앰플",
+          cta: "장벽 케어 시작하기",
+          url: "https://replyalba.com/pt/ILAPhWg9Zx",
+        }
+      },
+      {
+        minScore: 15,
+        maxScore: 22,
+        title: "🟠 장벽 손상 주의",
+        content: "피부 장벽이 상당히 손상된 상태입니다. 전문적인 장벽 복구 케어가 필요합니다.",
+        recommendation: "저자극 클렌저로 변경하고, 장벽 복구에 집중하는 스킨케어 루틴을 구축하세요. 줄기세포 기반 제품이 도움이 될 수 있습니다.",
+        product: {
+          name: "스템엔셀 미미셀 시그니처",
+          desc: "피부 시간을 되돌리는 줄기세포 과학적 관리",
+          cta: "집중 복구 시작하기",
+          url: "https://replyalba.com/pt/Rzqo5tlz9p",
+        }
+      },
+      {
+        minScore: 23,
+        maxScore: 30,
+        title: "🔴 긴급 장벽 복구",
+        content: "피부 장벽이 심하게 손상된 상태입니다. 즉각적인 집중 케어가 필요합니다.",
+        recommendation: "모든 자극적인 스킨케어를 중단하고, 장벽 복구에만 집중하세요. 피부과 상담과 함께 프리미엄 복구 제품 사용을 권합니다.",
+        product: {
+          name: "천수윤진2",
+          desc: "바를수록 어려지는 기적의 피부 솔루션",
+          cta: "긴급 복구 시작하기",
+          url: "https://replyalba.com/pt/Sxw8G15GMU",
+        }
+      }
+    ]
+  },
+  "inner-beauty": {
+    title: "이너뷰티 점수 테스트",
+    description: "내면에서부터 빛나는 아름다움, 나의 이너뷰티 점수를 확인해 보세요.",
+    questions: [
+      {
+        id: 1,
+        question: "하루에 물을 얼마나 드시나요?",
+        icon: "Droplets",
+        options: [
+          { text: "2L 이상 충분히 마신다", score: 0 },
+          { text: "1~2L 정도 마신다", score: 1 },
+          { text: "500ml~1L 정도 마신다", score: 2 },
+          { text: "거의 마시지 않는다", score: 3 },
+        ],
+      },
+      {
+        id: 2,
+        question: "과일과 채소를 얼마나 드시나요?",
+        options: [
+          { text: "매일 충분히 먹는다", score: 0 },
+          { text: "자주 먹는 편이다", score: 1 },
+          { text: "가끔 먹는다", score: 2 },
+          { text: "거의 먹지 않는다", score: 3 },
+        ],
+      },
+      {
+        id: 3,
+        question: "하루 평균 수면 시간은?",
+        icon: "Moon",
+        options: [
+          { text: "7~8시간 충분히 잔다", score: 0 },
+          { text: "6시간 정도 잔다", score: 1 },
+          { text: "5시간 이하로 잔다", score: 2 },
+          { text: "불규칙하고 수면의 질이 나쁘다", score: 3 },
+        ],
+      },
+      {
+        id: 4,
+        question: "스트레스 관리는 어떻게 하시나요?",
+        icon: "Brain",
+        options: [
+          { text: "효과적으로 관리하고 있다", score: 0 },
+          { text: "나름 관리하려 노력한다", score: 1 },
+          { text: "관리가 잘 안 된다", score: 2 },
+          { text: "스트레스가 매우 심하다", score: 3 },
+        ],
+      },
+      {
+        id: 5,
+        question: "규칙적인 운동을 하고 계시나요?",
+        options: [
+          { text: "주 3회 이상 한다", score: 0 },
+          { text: "주 1~2회 한다", score: 1 },
+          { text: "거의 하지 않는다", score: 2 },
+          { text: "전혀 하지 않는다", score: 3 },
+        ],
+      },
+      {
+        id: 6,
+        question: "가공식품이나 패스트푸드를 얼마나 드시나요?",
+        options: [
+          { text: "거의 먹지 않는다", score: 0 },
+          { text: "주 1~2회 정도", score: 1 },
+          { text: "주 3~4회 정도", score: 2 },
+          { text: "거의 매일 먹는다", score: 3 },
+        ],
+      },
+      {
+        id: 7,
+        question: "비타민이나 영양제를 챙겨 드시나요?",
+        options: [
+          { text: "매일 챙겨 먹는다", score: 0 },
+          { text: "가끔 먹는다", score: 1 },
+          { text: "거의 먹지 않는다", score: 2 },
+          { text: "먹어본 적 없다", score: 3 },
+        ],
+      },
+      {
+        id: 8,
+        question: "음주 빈도는 어떤가요?",
+        options: [
+          { text: "거의 마시지 않는다", score: 0 },
+          { text: "월 1~2회 정도", score: 1 },
+          { text: "주 1~2회 정도", score: 2 },
+          { text: "주 3회 이상", score: 3 },
+        ],
+      },
+      {
+        id: 9,
+        question: "장 건강 상태는 어떤가요?",
+        options: [
+          { text: "매일 규칙적이다", score: 0 },
+          { text: "대체로 괜찮다", score: 1 },
+          { text: "불규칙한 편이다", score: 2 },
+          { text: "변비/설사가 잦다", score: 3 },
+        ],
+      },
+      {
+        id: 10,
+        question: "피부와 머릿결의 윤기 상태는?",
+        icon: "Sparkles",
+        options: [
+          { text: "윤기가 넘친다", score: 0 },
+          { text: "보통이다", score: 1 },
+          { text: "건조하고 푸석하다", score: 2 },
+          { text: "매우 건조하고 생기가 없다", score: 3 },
+        ],
+      },
+    ],
+    results: [
+      {
+        minScore: 0,
+        maxScore: 7,
+        title: "🟢 빛나는 이너뷰티",
+        content: "내면에서부터 빛나는 건강한 아름다움을 가지고 계세요! 좋은 생활 습관이 몸 전체에 긍정적인 영향을 주고 있습니다.",
+        recommendation: "지금의 건강한 생활 습관을 유지하면서, 고품질 콜라겐 보충으로 더욱 빛나는 아름다움을 만들어 보세요.",
+        product: {
+          name: "천수애진",
+          desc: "마시는 고함량 콜라겐으로 탱탱한 피부 재생",
+          cta: "지금 확인하기",
+          url: "https://replyalba.com/pt/SanlazetIb",
+        }
+      },
+      {
+        minScore: 8,
+        maxScore: 14,
+        title: "🟡 관리 시작 추천",
+        content: "기본적인 건강 습관은 있지만, 몇 가지 개선으로 이너뷰티를 크게 높일 수 있어요!",
+        recommendation: "수분 섭취를 늘리고, 채소와 과일 비중을 높여 보세요. 콜라겐과 비타민 보충도 도움이 됩니다.",
+        product: {
+          name: "천수애진2",
+          desc: "속부터 채워지는 윤기와 보습의 결정체",
+          cta: "이너뷰티 시작하기",
+          url: "https://replyalba.com/pt/PkcJmotCli",
+        }
+      },
+      {
+        minScore: 15,
+        maxScore: 22,
+        title: "🟠 적극 관리 필요",
+        content: "생활 습관 개선이 필요한 시점이에요. 내면의 건강이 외면의 아름다움을 좌우합니다.",
+        recommendation: "수면, 식단, 운동 습관을 전면적으로 개선해 보세요. 프리미엄 영양 케어 제품으로 부족한 영양을 보충하시길 권합니다.",
+        product: {
+          name: "공후하결",
+          desc: "피부 근본부터 채우는 프리미엄 영양 케어",
+          cta: "영양 케어 시작하기",
+          url: "https://replyalba.com/pt/UKfoQbTwGI",
+        }
+      },
+      {
+        minScore: 23,
+        maxScore: 30,
+        title: "🔴 긴급 생활 개선",
+        content: "내면 건강이 상당히 저하된 상태입니다. 즉각적인 생활 습관 개선이 필요합니다.",
+        recommendation: "기본적인 생활 습관부터 하나씩 개선해 나가세요. 충분한 수면, 규칙적인 식사, 적절한 운동이 핵심입니다. 전문 영양 보충 제품도 함께 시작해 보세요.",
+        product: {
+          name: "CR-5",
+          desc: "주름·기미·잡티 고민 한 번에 해결하세요",
+          cta: "집중 케어 시작하기",
+          url: "https://replyalba.com/pt/JNyIgk9t32",
+        }
+      }
+    ]
   }
 };

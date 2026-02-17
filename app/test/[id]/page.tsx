@@ -118,8 +118,8 @@ export default function QuizPage() {
         {/* Progress */}
         <div className="space-y-4">
           <div className="flex justify-between items-end">
-            <span className="text-primary font-bold text-2xl">{(currentStep + 1).toString().padStart(2, '0')}</span>
-            <span className="text-gray-400 font-medium">/ {quiz.questions.length.toString().padStart(2, '0')}</span>
+            <span className="text-primary font-bold text-2xl">{currentStep + 1}</span>
+            <span className="text-gray-400 font-medium">/ {quiz.questions.length}</span>
           </div>
           <div className="h-2 bg-secondary rounded-full overflow-hidden">
             <motion.div

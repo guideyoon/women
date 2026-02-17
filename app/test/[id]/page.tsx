@@ -81,9 +81,14 @@ export default function QuizPage() {
               <h3 className="text-xl font-bold text-gray-800">{result.product.name}</h3>
               <p className="text-gray-500 text-sm">{result.product.desc}</p>
             </div>
-            <button className="w-full bg-primary text-white font-bold py-4 rounded-2xl shadow-lg shadow-rose-200 flex items-center justify-center gap-2 hover:bg-rose-600 transition-colors">
+            <a
+              href={result.product.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-primary text-white font-bold py-4 rounded-2xl shadow-lg shadow-rose-200 flex items-center justify-center gap-2 hover:bg-rose-600 transition-colors"
+            >
               {result.product.cta} <ArrowRight className="w-5 h-5" />
-            </button>
+            </a>
           </div>
 
           <button

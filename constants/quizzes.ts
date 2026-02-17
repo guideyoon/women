@@ -125,6 +125,7 @@ export const QUIZ_DATA = {
           name: "멀티비타민 미즈케어",
           desc: "여성 맞춤형 영양소 24종 — 건강한 지금을 더 오래",
           cta: "지금 확인하기",
+          url: "https://replyalba.com/pt/N0cKnHbm9V",
         }
       },
       {
@@ -137,6 +138,7 @@ export const QUIZ_DATA = {
           name: "프리미엄 로열 블랙 코슈",
           desc: "갱년기 여성을 위한 집중 케어 — 자연 유래 성분",
           cta: "특별 혜택가 보기",
+          url: "https://replyalba.com/pt/UKfoQbTwGI",
         }
       },
       {
@@ -149,6 +151,7 @@ export const QUIZ_DATA = {
           name: "미즈밸런스 올인원 솔루션",
           desc: "갱년기 증상 완화 기능성 인증 — 하루 한 알 집중 케어",
           cta: "무료 상담 신청하기",
+          url: "https://replyalba.com/pt/Y1PHVwO7GO",
         }
       },
       {
@@ -161,6 +164,7 @@ export const QUIZ_DATA = {
           name: "미즈케어 프리미엄 솔루션",
           desc: "의학적 근거 기반 — 갱년기 집중 관리 프로그램",
           cta: "전문 상담 바로가기",
+          url: "https://replyalba.com/pt/DU4eJfMd1j",
         }
       }
     ]
@@ -281,6 +285,7 @@ export const QUIZ_DATA = {
           name: "미즈 수분 크림",
           desc: "하루 종일 촉촉한 수분막 — 피부 장벽 강화",
           cta: "제품 상세보기",
+          url: "https://replyalba.com/pt/yBXZ7Kddui",
         }
       },
       {
@@ -293,6 +298,7 @@ export const QUIZ_DATA = {
           name: "스템벨 자생력 앰플",
           desc: "줄기세포 배양 기술 — 피부 자생력 회복",
           cta: "특별 혜택 확인",
+          url: "https://replyalba.com/pt/CzCyUNUG4o",
         }
       },
       {
@@ -305,6 +311,7 @@ export const QUIZ_DATA = {
           name: "MS-II PLUS",
           desc: "피부 탄력 집중 개선 — 고농축 리프팅 솔루션",
           cta: "특별 혜택 확인",
+          url: "https://replyalba.com/pt/IGBX5btayE",
         }
       },
       {
@@ -317,6 +324,7 @@ export const QUIZ_DATA = {
           name: "CR-5 멀티 솔루션",
           desc: "속부터 채워주는 강력한 리프팅 — 5중 복합 기능",
           cta: "무료 체험 신청",
+          url: "https://replyalba.com/pt/JNyIgk9t32",
         }
       }
     ]
@@ -437,6 +445,7 @@ export const QUIZ_DATA = {
           name: "커플 케미 프로그램",
           desc: "서로의 차이를 이해하고 더 뜨겁게",
           cta: "자세히 보기",
+          url: "https://replyalba.com/pt/YfcVFCdD21",
         }
       },
       {
@@ -449,6 +458,7 @@ export const QUIZ_DATA = {
           name: "커플 소통 가이드",
           desc: "대화로 더 가까워지는 관계 만들기",
           cta: "지금 확인하기",
+          url: "https://replyalba.com/pt/xWHMHU09mP",
         }
       },
       {
@@ -461,6 +471,7 @@ export const QUIZ_DATA = {
           name: "커플 힐링 프로그램",
           desc: "함께 성장하는 관계를 위한 맞춤 케어",
           cta: "특별 혜택 보기",
+          url: "https://replyalba.com/pt/LAiSP6X1ij",
         }
       },
       {
@@ -473,6 +484,7 @@ export const QUIZ_DATA = {
           name: "관계 깊어지기 프로그램",
           desc: "서로의 마음을 더 깊이 이해하는 비결",
           cta: "무료 상담 받기",
+          url: "https://replyalba.com/pt/EkShEr1oPs",
         }
       }
     ]
@@ -593,6 +605,7 @@ export const QUIZ_DATA = {
           name: "셀프 힐링 프로그램",
           desc: "나를 사랑하는 것부터 시작하는 건강한 연애",
           cta: "자세히 보기",
+          url: "https://replyalba.com/pt/WsdU9oMhje",
         }
       },
       {
@@ -605,6 +618,7 @@ export const QUIZ_DATA = {
           name: "커플 힐링 테라피",
           desc: "더 깊고 안정적인 사랑을 위한 가이드",
           cta: "지금 확인하기",
+          url: "https://replyalba.com/pt/z6pRyceT7w",
         }
       },
       {
@@ -617,6 +631,7 @@ export const QUIZ_DATA = {
           name: "연애 감성 코칭",
           desc: "감성과 이성의 균형을 찾는 연애 레시피",
           cta: "특별 혜택 보기",
+          url: "https://replyalba.com/pt/SoLJ7OMizy",
         }
       },
       {
@@ -629,6 +644,7 @@ export const QUIZ_DATA = {
           name: "건강한 연애 가이드",
           desc: "열정을 지키면서도 균형 잡힌 사랑 만들기",
           cta: "무료 상담 받기",
+          url: "https://replyalba.com/pt/Phjrq2zsy8",
         }
       }
     ]
@@ -749,6 +765,7 @@ export const QUIZ_DATA = {
           name: "커플 운세 프리미엄",
           desc: "더 깊은 사주 분석으로 미래를 엿보기",
           cta: "자세히 보기",
+          url: "https://replyalba.com/pt/Z1IJI9rY2c",
         }
       },
       {
@@ -761,6 +778,7 @@ export const QUIZ_DATA = {
           name: "운명 분석 리포트",
           desc: "두 사람만을 위한 맞춤 운세 분석",
           cta: "지금 확인하기",
+          url: "https://replyalba.com/pt/IlnAem4ygW",
         }
       },
       {
@@ -773,6 +791,7 @@ export const QUIZ_DATA = {
           name: "관계 성장 프로그램",
           desc: "함께 성장하며 더 단단해지는 사랑",
           cta: "특별 혜택 보기",
+          url: "https://replyalba.com/pt/SNLg3ILPbd",
         }
       },
       {
@@ -785,6 +804,7 @@ export const QUIZ_DATA = {
           name: "사주 심층 상담",
           desc: "운명을 읽고 사랑을 지키는 방법",
           cta: "무료 상담 받기",
+          url: "https://replyalba.com/pt/WeWtmEo70h",
         }
       }
     ]
@@ -905,6 +925,7 @@ export const QUIZ_DATA = {
           name: "행복한 커플 마스터",
           desc: "건강한 관계를 더 깊게 만드는 비결",
           cta: "자세히 보기",
+          url: "https://replyalba.com/pt/MbTJlgNLg8",
         }
       },
       {
@@ -917,6 +938,7 @@ export const QUIZ_DATA = {
           name: "자존감 회복 프로그램",
           desc: "나를 사랑해야 사랑받을 수 있어요",
           cta: "지금 확인하기",
+          url: "https://replyalba.com/pt/GnNKelUPTQ",
         }
       },
       {
@@ -929,6 +951,7 @@ export const QUIZ_DATA = {
           name: "마음 치유 테라피",
           desc: "불안을 내려놓고 진정한 사랑을 만나기",
           cta: "특별 혜택 보기",
+          url: "https://replyalba.com/pt/WSueAH6gko",
         }
       },
       {
@@ -941,6 +964,7 @@ export const QUIZ_DATA = {
           name: "심리 상담 프로그램",
           desc: "내면의 상처를 치유하고 건강한 사랑 시작하기",
           cta: "무료 상담 받기",
+          url: "https://replyalba.com/pt/NGi7kc77mF",
         }
       }
     ]

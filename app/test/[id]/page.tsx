@@ -4,21 +4,8 @@ import { useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { QUIZ_DATA } from '@/constants/quizzes';
-import { ChevronLeft, ArrowRight, CheckCircle2, ArrowLeft, Clock, Info, Flame, Moon, Droplets, HeartPulse, Wind, Brain, Accessibility, Sparkles, BatteryLow, Calendar } from 'lucide-react';
+import { ArrowRight, CheckCircle2, ArrowLeft, Clock, Info } from 'lucide-react';
 import { cn } from '@/lib/utils';
-
-const IconMap: Record<string, any> = {
-  Flame,
-  Moon,
-  Droplets,
-  HeartPulse,
-  Wind,
-  Brain,
-  Accessibility,
-  Sparkles,
-  BatteryLow,
-  Calendar,
-};
 
 export default function QuizPage() {
   const params = useParams();
@@ -104,7 +91,6 @@ export default function QuizPage() {
 
   const currentQuestion = quiz.questions[currentStep] as any;
   const progress = ((currentStep + 1) / quiz.questions.length) * 100;
-  const QuestionIcon = currentQuestion.icon ? IconMap[currentQuestion.icon] : null;
 
   return (
     <main className="max-w-3xl mx-auto min-h-screen bg-background p-6">
@@ -129,15 +115,6 @@ export default function QuizPage() {
             />
           </div>
         </div>
-
-        {/* Dynamic Icon/Illustration */}
-        {QuestionIcon && (
-          <div className="flex justify-center py-4">
-            <div className="w-32 h-32 bg-primary/5 rounded-full flex items-center justify-center border border-primary/10 shadow-inner">
-              <QuestionIcon className="w-16 h-16 text-primary" strokeWidth={1.5} />
-            </div>
-          </div>
-        )}
 
         <div className="space-y-6">
           <h2 className="text-2xl font-bold text-gray-800 leading-tight">

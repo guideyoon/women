@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ChevronRight, Sparkles, Heart, Activity, Calculator, Moon } from "lucide-react";
+import { ChevronRight, Sparkles, Heart, Activity, Calculator, Moon, HeartHandshake } from "lucide-react";
 
 export default function Home() {
   const tests = [
@@ -24,14 +24,44 @@ export default function Home() {
       icon: <Calculator className="w-6 h-6 text-blue-400" />,
       color: "bg-blue-50",
     },
+    {
+      id: "chemistry",
+      title: "속궁합 테스트",
+      desc: "우리의 케미스트리는 몇 점?",
+      icon: <HeartHandshake className="w-6 h-6 text-rose-400" />,
+      color: "bg-rose-50",
+    },
+    {
+      id: "love-type",
+      title: "연애 타입 테스트",
+      desc: "나의 연애 스타일은?",
+      icon: <Heart className="w-6 h-6 text-pink-400" />,
+      color: "bg-pink-50",
+    },
+    {
+      id: "couple-fortune",
+      title: "커플 사주 테스트",
+      desc: "운명적 궁합을 알아보세요",
+      icon: <Moon className="w-6 h-6 text-purple-400" />,
+      color: "bg-purple-50",
+    },
+    {
+      id: "lover-psychology",
+      title: "연인 심리 테스트",
+      desc: "연인과의 심리적 궁합은?",
+      icon: <Sparkles className="w-6 h-6 text-violet-400" />,
+      color: "bg-violet-50",
+    },
   ];
 
   const categories = [
     { name: "건강", icon: <Heart className="w-5 h-5" />, href: "/solutions" },
     { name: "피부", icon: <Sparkles className="w-5 h-5" />, href: "/test/skin-age" },
     { name: "다이어트", icon: <Calculator className="w-5 h-5" />, href: "/calculator" },
+    { name: "연애", icon: <HeartHandshake className="w-5 h-5" />, href: "/test/chemistry" },
     { name: "운세", icon: <Moon className="w-5 h-5" />, href: "/fortune" },
   ];
+
 
   return (
     <main className="max-w-7xl mx-auto min-h-screen bg-background pb-20 px-4 sm:px-6 lg:px-8">
@@ -73,9 +103,9 @@ export default function Home() {
             <h2 className="text-xl font-bold mb-6">카테고리별 보기</h2>
             <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 gap-4">
               {categories.map((cat) => (
-                <Link 
+                <Link
                   href={cat.href}
-                  key={cat.name} 
+                  key={cat.name}
                   className="flex flex-col items-center gap-3 p-4 rounded-2xl bg-white border border-secondary card-shadow hover:bg-rose-50 transition-colors"
                 >
                   <div className="w-14 h-14 rounded-full bg-secondary flex items-center justify-center text-primary">

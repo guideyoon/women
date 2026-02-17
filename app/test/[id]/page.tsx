@@ -102,7 +102,7 @@ export default function QuizPage() {
     );
   }
 
-  const currentQuestion = quiz.questions[currentStep];
+  const currentQuestion = quiz.questions[currentStep] as any;
   const progress = ((currentStep + 1) / quiz.questions.length) * 100;
   const QuestionIcon = currentQuestion.icon ? IconMap[currentQuestion.icon] : null;
 

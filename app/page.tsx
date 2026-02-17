@@ -120,9 +120,12 @@ export default function Home() {
                 <span className="text-white/80 text-xs font-bold bg-white/20 px-3 py-1 rounded-full mb-3 inline-block backdrop-blur-sm">
                   {style.tag}
                 </span>
-                <h3 className="font-bold text-2xl">
+                <h3 className="font-bold text-2xl leading-tight">
                   {merchant.title}
                 </h3>
+                <p className="mt-2 text-white/90 text-sm font-medium line-clamp-1">
+                  {merchant.subtitle}
+                </p>
                 <p className={`mt-4 ${style.text} flex items-center gap-1 font-medium`}>
                   솔루션 보러가기 <ChevronRight className="w-4 h-4" />
                 </p>

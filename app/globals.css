@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fffaf9; /* 부드러운 살구빛 도는 화이트 */
+  --foreground: #4a4a4a; /* 부드러운 다크 그레이 */
+  --primary: #ff8a80;    /* 따뜻한 로즈 핑크 */
+  --secondary: #fce4ec;  /* 연한 핑크 베이지 */
+  --accent: #ffb74d;     /* 부드러운 오렌지 (포인트) */
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+}
+
+.card-shadow {
+  box-shadow: 0 4px 20px -2px rgba(255, 138, 128, 0.1);
+}

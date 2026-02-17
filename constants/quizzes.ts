@@ -6,6 +6,7 @@ export const QUIZ_DATA = {
       {
         id: 1,
         question: "얼굴이나 상체가 갑자기 화끈거리며 열이 오르나요? (안면홍조)",
+        icon: "Flame",
         options: [
           { text: "거의 없다", score: 0 },
           { text: "가끔 그렇다 (주 1~2회)", score: 1 },
@@ -16,6 +17,7 @@ export const QUIZ_DATA = {
       {
         id: 2,
         question: "밤에 잠들기 어렵거나 자주 깨시나요?",
+        icon: "Moon",
         options: [
           { text: "잘 자고 있다", score: 0 },
           { text: "가끔 뒤척인다", score: 1 },
@@ -26,6 +28,7 @@ export const QUIZ_DATA = {
       {
         id: 3,
         question: "식은땀이 나거나 밤에 땀에 젖어 깨신 적이 있나요?",
+        icon: "Droplets",
         options: [
           { text: "전혀 없다", score: 0 },
           { text: "가끔 그렇다", score: 1 },
@@ -36,6 +39,7 @@ export const QUIZ_DATA = {
       {
         id: 4,
         question: "가슴이 두근거리거나 불안감을 자주 느끼시나요?",
+        icon: "HeartPulse",
         options: [
           { text: "거의 없다", score: 0 },
           { text: "가끔 느낀다", score: 1 },
@@ -46,6 +50,7 @@ export const QUIZ_DATA = {
       {
         id: 5,
         question: "이유 없이 우울하거나 짜증이 나시나요?",
+        icon: "Wind",
         options: [
           { text: "전혀 그렇지 않다", score: 0 },
           { text: "가끔 그렇다", score: 1 },
@@ -56,6 +61,7 @@ export const QUIZ_DATA = {
       {
         id: 6,
         question: "기억력이 떨어지거나 집중하기 어려운가요?",
+        icon: "Brain",
         options: [
           { text: "전혀 그렇지 않다", score: 0 },
           { text: "가끔 깜빡한다", score: 1 },
@@ -66,6 +72,7 @@ export const QUIZ_DATA = {
       {
         id: 7,
         question: "관절이나 근육이 뻣뻣하거나 아픈 곳이 있나요?",
+        icon: "Accessibility",
         options: [
           { text: "전혀 없다", score: 0 },
           { text: "가끔 느낀다", score: 1 },
@@ -76,6 +83,7 @@ export const QUIZ_DATA = {
       {
         id: 8,
         question: "피부가 건조하거나 가려움을 자주 느끼시나요?",
+        icon: "Sparkles",
         options: [
           { text: "전혀 그렇지 않다", score: 0 },
           { text: "가끔 그렇다", score: 1 },
@@ -86,6 +94,7 @@ export const QUIZ_DATA = {
       {
         id: 9,
         question: "쉽게 피로해지거나 체력이 크게 떨어졌다고 느끼시나요?",
+        icon: "BatteryLow",
         options: [
           { text: "전혀 그렇지 않다", score: 0 },
           { text: "가끔 그렇다", score: 1 },
@@ -96,6 +105,7 @@ export const QUIZ_DATA = {
       {
         id: 10,
         question: "생리 주기가 불규칙하거나 변화가 있나요?",
+        icon: "Calendar",
         options: [
           { text: "규칙적이다", score: 0 },
           { text: "약간 불규칙해졌다", score: 1 },

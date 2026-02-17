@@ -4,8 +4,21 @@ import { useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { QUIZ_DATA } from '@/constants/quizzes';
-import { ChevronLeft, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ChevronLeft, ArrowRight, CheckCircle2, ArrowLeft, Clock, Info, Flame, Moon, Droplets, HeartPulse, Wind, Brain, Accessibility, Sparkles, BatteryLow, Calendar } from 'lucide-react';
 import { cn } from '@/lib/utils';
+
+const IconMap: Record<string, any> = {
+  Flame,
+  Moon,
+  Droplets,
+  HeartPulse,
+  Wind,
+  Brain,
+  Accessibility,
+  Sparkles,
+  BatteryLow,
+  Calendar,
+};
 
 export default function QuizPage() {
   const params = useParams();
@@ -19,7 +32,7 @@ export default function QuizPage() {
 
   if (!quiz) return <div>페이지를 찾을 수 없습니다.</div>;
 
-  const handleOptionClick = (score: number) => {
+  const handleAnswer = (score: number) => {
     const nextScore = totalScore + score;
     setTotalScore(nextScore);
 
@@ -86,55 +99,61 @@ export default function QuizPage() {
 
   const currentQuestion = quiz.questions[currentStep];
   const progress = ((currentStep + 1) / quiz.questions.length) * 100;
+  const QuestionIcon = currentQuestion.icon ? IconMap[currentQuestion.icon] : null;
 
   return (
-    <main className="max-w-3xl mx-auto min-h-screen bg-background">
-      <div className="p-6">
-        <button onClick={() => router.back()} className="p-2 -ml-2 text-gray-400">
-          <ChevronLeft className="w-6 h-6" />
-        </button>
-
-        <div className="mt-6 space-y-2">
-          <div className="w-full h-2 bg-secondary rounded-full overflow-hidden">
+    <main className="max-w-3xl mx-auto min-h-screen bg-background p-6">
+      <motion.div
+        key={currentStep}
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: -20 }}
+        className="pt-10 space-y-8"
+      >
+        {/* Progress */}
+        <div className="space-y-4">
+          <div className="flex justify-between items-end">
+            <span className="text-primary font-bold text-2xl">0{currentStep + 1}</span>
+            <span className="text-gray-400 font-medium">/ 0{quiz.questions.length}</span>
+          </div>
+          <div className="h-2 bg-secondary rounded-full overflow-hidden">
             <motion.div
               className="h-full bg-primary"
               initial={{ width: 0 }}
               animate={{ width: `${progress}%` }}
             />
           </div>
-          <p className="text-xs text-right text-gray-400 font-medium">
-            {currentStep + 1} / {quiz.questions.length}
-          </p>
         </div>
 
-        <div className="mt-12">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentStep}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              className="space-y-10"
-            >
-              <h2 className="text-2xl font-bold text-gray-800 leading-tight">
-                {currentQuestion.question}
-              </h2>
+        {/* Dynamic Icon/Illustration */}
+        {QuestionIcon && (
+          <div className="flex justify-center py-4">
+            <div className="w-32 h-32 bg-primary/5 rounded-full flex items-center justify-center border border-primary/10 shadow-inner">
+              <QuestionIcon className="w-16 h-16 text-primary" strokeWidth={1.5} />
+            </div>
+          </div>
+        )}
 
-              <div className="space-y-4">
-                {currentQuestion.options.map((option, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => handleOptionClick(option.score)}
-                    className="w-full text-left p-5 rounded-2xl bg-white border border-secondary hover:border-primary hover:bg-rose-50 transition-all text-gray-700 font-medium shadow-sm active:scale-95"
-                  >
-                    {option.text}
-                  </button>
-                ))}
-              </div>
-            </motion.div>
-          </AnimatePresence>
+        <div className="space-y-6">
+          <h2 className="text-2xl font-bold text-gray-800 leading-tight">
+            {currentQuestion.question}
+          </h2>
+
+          <div className="grid gap-3">
+            {currentQuestion.options.map((option: any, index: number) => (
+              <button
+                key={index}
+                onClick={() => handleAnswer(option.score)}
+                className="w-full p-5 text-left rounded-2xl border border-secondary hover:border-primary hover:bg-rose-50 transition-all group relative overflow-hidden bg-white card-shadow"
+              >
+                <span className="relative z-10 font-medium text-gray-700 group-hover:text-primary">
+                  {option.text}
+                </span>
+              </button>
+            ))}
+          </div>
         </div>
-      </div>
+      </motion.div>
     </main>
   );
 }

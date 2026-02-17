@@ -1,7 +1,19 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ChevronRight, Sparkles, Heart, Activity, Calculator, Moon, HeartHandshake } from "lucide-react";
+import { merchants } from "@/constants/merchants";
 
 export default function Home() {
+  const [randomMerchants, setRandomMerchants] = useState<any[]>([]);
+
+  useEffect(() => {
+    // Randomly select 3 merchants
+    const shuffled = [...merchants].sort(() => 0.5 - Math.random());
+    setRandomMerchants(shuffled.slice(0, 3));
+  }, []);
+
   const tests = [
     {
       id: "menopause",
@@ -54,6 +66,12 @@ export default function Home() {
     },
   ];
 
+  const bannerStyles = [
+    { bg: "from-rose-400 to-pink-500", text: "text-rose-100", tag: "인기 급상승", icon: "🎁" },
+    { bg: "from-purple-400 to-indigo-500", text: "text-purple-100", tag: "MD 추천", icon: "✨" },
+    { bg: "from-amber-400 to-orange-500", text: "text-amber-100", tag: "금주의 혜택", icon: "💕" },
+  ];
+
   return (
     <main className="max-w-7xl mx-auto min-h-screen bg-background pb-20 px-4 sm:px-6 lg:px-8">
       {/* Hero Section */}
@@ -74,14 +92,14 @@ export default function Home() {
             <Link
               key={test.id}
               href={test.id === 'bmr' ? '/calculator' : `/test/${test.id}`}
-              className="flex items-center p-6 rounded-2xl bg-white border border-secondary card-shadow hover:scale-[1.02] transition-transform"
+              className="flex items-center p-6 rounded-2xl bg-white border border-secondary card-shadow hover:scale-[1.02] transition-transform h-full min-h-[120px]"
             >
-              <div className={`p-4 rounded-xl ${test.color} mr-4`}>{test.icon}</div>
-              <div className="flex-1">
-                <h3 className="font-bold text-gray-800 text-lg">{test.title}</h3>
-                <p className="text-sm text-gray-500">{test.desc}</p>
+              <div className={`p-4 rounded-xl ${test.color} mr-4 flex-shrink-0`}>{test.icon}</div>
+              <div className="flex-1 min-w-0">
+                <h3 className="font-bold text-gray-800 text-lg line-clamp-1">{test.title}</h3>
+                <p className="text-sm text-gray-500 line-clamp-2">{test.desc}</p>
               </div>
-              <ChevronRight className="w-5 h-5 text-gray-300" />
+              <ChevronRight className="w-5 h-5 text-gray-300 flex-shrink-0" />
             </Link>
           ))}
         </div>
@@ -89,46 +107,40 @@ export default function Home() {
 
       {/* Banner Cards */}
       <section className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-        {/* Banner 1 - 갱년기 건강 */}
-        <Link href="/solutions" className="block rounded-2xl bg-gradient-to-br from-rose-400 to-pink-500 p-8 text-white relative overflow-hidden group">
-          <div className="relative z-10">
-            <span className="text-white/80 text-xs font-bold bg-white/20 px-3 py-1 rounded-full mb-3 inline-block backdrop-blur-sm">인기 급상승</span>
-            <h3 className="font-bold text-2xl">갱년기 건강,<br />하루 한 알로 관리하세요</h3>
-            <p className="mt-4 text-rose-100 flex items-center gap-1 font-medium">솔루션 보러가기 <ChevronRight className="w-4 h-4" /></p>
-          </div>
-          <div className="absolute -right-4 -bottom-4 w-32 h-32 bg-white/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500" />
-          <div className="absolute right-6 top-1/2 -translate-y-1/2 text-6xl opacity-20 grayscale brightness-200">
-            🎁
-          </div>
-        </Link>
-
-        {/* Banner 2 - 피부 관리 */}
-        <Link href="/test/skin-age" className="block rounded-2xl bg-gradient-to-br from-purple-400 to-indigo-500 p-8 text-white relative overflow-hidden group">
-          <div className="relative z-10">
-            <span className="text-white/80 text-xs font-bold bg-white/20 px-3 py-1 rounded-full mb-3 inline-block backdrop-blur-sm">무료 테스트</span>
-            <h3 className="font-bold text-2xl">내 피부 나이는?<br />지금 바로 확인하세요</h3>
-            <p className="mt-4 text-purple-100 flex items-center gap-1 font-medium">테스트 시작하기 <ChevronRight className="w-4 h-4" /></p>
-          </div>
-          <div className="absolute -right-4 -bottom-4 w-32 h-32 bg-white/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500" />
-          <div className="absolute right-6 top-1/2 -translate-y-1/2 text-6xl opacity-20 grayscale brightness-200">
-            ✨
-          </div>
-        </Link>
-
-        {/* Banner 3 - 커플 궁합 */}
-        <Link href="/test/chemistry" className="block rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 p-8 text-white relative overflow-hidden group">
-          <div className="relative z-10">
-            <span className="text-white/80 text-xs font-bold bg-white/20 px-3 py-1 rounded-full mb-3 inline-block backdrop-blur-sm">커플 필수</span>
-            <h3 className="font-bold text-2xl">속궁합 테스트로<br />우리의 케미를 확인해봐</h3>
-            <p className="mt-4 text-amber-100 flex items-center gap-1 font-medium">테스트 하러가기 <ChevronRight className="w-4 h-4" /></p>
-          </div>
-          <div className="absolute -right-4 -bottom-4 w-32 h-32 bg-white/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500" />
-          <div className="absolute right-6 top-1/2 -translate-y-1/2 text-6xl opacity-20 grayscale brightness-200">
-            💕
-          </div>
-        </Link>
+        {randomMerchants.map((merchant, index) => {
+          const style = bannerStyles[index % bannerStyles.length];
+          return (
+            <Link
+              key={merchant.id}
+              href={merchant.url}
+              target="_blank"
+              className={`block rounded-2xl bg-gradient-to-br ${style.bg} p-8 text-white relative overflow-hidden group h-full`}
+            >
+              <div className="relative z-10">
+                <span className="text-white/80 text-xs font-bold bg-white/20 px-3 py-1 rounded-full mb-3 inline-block backdrop-blur-sm">
+                  {style.tag}
+                </span>
+                <h3 className="font-bold text-2xl">
+                  {merchant.title}
+                </h3>
+                <p className={`mt-4 ${style.text} flex items-center gap-1 font-medium`}>
+                  솔루션 보러가기 <ChevronRight className="w-4 h-4" />
+                </p>
+              </div>
+              <div className="absolute -right-4 -bottom-4 w-32 h-32 bg-white/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500" />
+              <div className="absolute right-6 top-1/2 -translate-y-1/2 text-6xl opacity-20 grayscale brightness-200">
+                {style.icon}
+              </div>
+            </Link>
+          );
+        })}
+        {/* Skeleton loaders while loading random merchants */}
+        {randomMerchants.length === 0 && Array(3).fill(0).map((_, i) => (
+          <div key={i} className="h-[200px] rounded-2xl bg-gray-100 animate-pulse" />
+        ))}
       </section>
     </main>
   );
 }
+
 

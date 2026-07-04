@@ -1,5 +1,5 @@
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://women-five.vercel.app'
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://mizbalance.com'
 ).replace(/\/$/, '');
 
 export const SITE_NAME = '미즈 밸런스';

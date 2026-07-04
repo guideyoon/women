@@ -28,7 +28,8 @@ export async function generateMetadata({ params }: TestPageProps): Promise<Metad
   }
 
   const url = `/test/${test.id}`;
-  const title = `${test.title} | ${SITE_NAME}`;
+  const title = test.title;
+  const socialTitle = `${test.title} | ${SITE_NAME}`;
 
   return {
     metadataBase: new URL(SITE_URL),
@@ -39,7 +40,7 @@ export async function generateMetadata({ params }: TestPageProps): Promise<Metad
       canonical: url,
     },
     openGraph: {
-      title,
+      title: socialTitle,
       description: test.description,
       url,
       siteName: SITE_NAME,
@@ -48,7 +49,7 @@ export async function generateMetadata({ params }: TestPageProps): Promise<Metad
     },
     twitter: {
       card: 'summary',
-      title,
+      title: socialTitle,
       description: test.description,
     },
   };

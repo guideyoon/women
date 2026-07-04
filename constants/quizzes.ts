@@ -135,10 +135,10 @@ export const QUIZ_DATA = {
         content: "갱년기 초기 증상들이 조금씩 나타나고 있어요. 지금부터 적극적인 관리를 시작하면 증상 악화를 효과적으로 예방할 수 있습니다.",
         recommendation: "스트레스 관리(명상·요가), 규칙적인 운동, 에스트로겐이 풍부한 식품(석류·콩·아마씨) 섭취를 추천합니다. 필요시 전문 보조제를 고려해 보세요.",
         product: {
-          name: "프리미엄 로열 블랙 코슈",
-          desc: "갱년기 여성을 위한 집중 케어 — 자연 유래 성분",
+          name: "여궁골드",
+          desc: "여성 생애 주기별 맞춤 솔루션 제공",
           cta: "특별 혜택가 보기",
-          url: "https://replyalba.com/pt/UKfoQbTwGI",
+          url: "https://replyalba.com/pt/Z1IJI9rY2c",
         }
       },
       {
@@ -442,8 +442,8 @@ export const QUIZ_DATA = {
         content: "당신은 개방적이고 모험적인 스타일이에요. 새로운 시도를 즐기며 자극적인 경험을 선호합니다. 파트너의 점수와 비교해보세요!",
         recommendation: "💡 궁합 확인법: 파트너도 같은 테스트를 한 뒤, 두 점수의 차이를 확인하세요.\n\n🔥 0~6점 차이 = 매우 좋음 — 성적 템포·취향이 거의 비슷!\n👍 7~12점 차이 = 좋음 — 대화로 충분히 조율 가능\n⚠️ 13~18점 차이 = 보통 — 꽤 다른 스타일, 노력 필요\n😅 19점 이상 = 많이 다름 — 핵심 가치가 달라 장기적 조율 중요",
         product: {
-          name: "커플 케미 프로그램",
-          desc: "서로의 차이를 이해하고 더 뜨겁게",
+          name: "우먼시크릿",
+          desc: "관계 자신감을 위한 여성 시크릿 케어",
           cta: "자세히 보기",
           url: "https://replyalba.com/pt/YfcVFCdD21",
         }
@@ -455,8 +455,8 @@ export const QUIZ_DATA = {
         content: "적당한 모험심과 안정감을 모두 갖춘 균형 잡힌 스타일이에요. 다양한 파트너와 잘 맞출 수 있는 유연한 타입입니다. 파트너의 점수와 비교해보세요!",
         recommendation: "💡 궁합 확인법: 파트너도 같은 테스트를 한 뒤, 두 점수의 차이를 확인하세요.\n\n🔥 0~6점 차이 = 매우 좋음 — 성적 템포·취향이 거의 비슷!\n👍 7~12점 차이 = 좋음 — 대화로 충분히 조율 가능\n⚠️ 13~18점 차이 = 보통 — 꽤 다른 스타일, 노력 필요\n😅 19점 이상 = 많이 다름 — 핵심 가치가 달라 장기적 조율 중요",
         product: {
-          name: "커플 소통 가이드",
-          desc: "대화로 더 가까워지는 관계 만들기",
+          name: "우먼시크릿2",
+          desc: "더 깊고 진한 사랑을 위한 시크릿 관리",
           cta: "지금 확인하기",
           url: "https://replyalba.com/pt/xWHMHU09mP",
         }
@@ -468,8 +468,8 @@ export const QUIZ_DATA = {
         content: "감정적 연결과 분위기를 중시하는 로맨틱한 스타일이에요. 깊은 교감과 애정 표현을 중요하게 생각합니다. 파트너의 점수와 비교해보세요!",
         recommendation: "💡 궁합 확인법: 파트너도 같은 테스트를 한 뒤, 두 점수의 차이를 확인하세요.\n\n🔥 0~6점 차이 = 매우 좋음 — 성적 템포·취향이 거의 비슷!\n👍 7~12점 차이 = 좋음 — 대화로 충분히 조율 가능\n⚠️ 13~18점 차이 = 보통 — 꽤 다른 스타일, 노력 필요\n😅 19점 이상 = 많이 다름 — 핵심 가치가 달라 장기적 조율 중요",
         product: {
-          name: "커플 힐링 프로그램",
-          desc: "함께 성장하는 관계를 위한 맞춤 케어",
+          name: "우먼시크릿3",
+          desc: "여성의 건강과 아름다움을 지키는 관계 케어",
           cta: "특별 혜택 보기",
           url: "https://replyalba.com/pt/LAiSP6X1ij",
         }
@@ -477,12 +477,12 @@ export const QUIZ_DATA = {
       {
         minScore: 34,
         maxScore: 40,
-        title: "� 순수 하트형",
+        title: "💗 순수 하트형",
         content: "안정적이고 감성적인 교감을 가장 중시하는 스타일이에요. 편안함과 애정표현 속에서 최고의 만족을 느끼는 타입입니다. 파트너의 점수와 비교해보세요!",
         recommendation: "💡 궁합 확인법: 파트너도 같은 테스트를 한 뒤, 두 점수의 차이를 확인하세요.\n\n🔥 0~6점 차이 = 매우 좋음 — 성적 템포·취향이 거의 비슷!\n👍 7~12점 차이 = 좋음 — 대화로 충분히 조율 가능\n⚠️ 13~18점 차이 = 보통 — 꽤 다른 스타일, 노력 필요\n😅 19점 이상 = 많이 다름 — 핵심 가치가 달라 장기적 조율 중요",
         product: {
-          name: "관계 깊어지기 프로그램",
-          desc: "서로의 마음을 더 깊이 이해하는 비결",
+          name: "우먼시크릿4",
+          desc: "관계 속 자신감을 높여주는 프리미엄 솔루션",
           cta: "무료 상담 받기",
           url: "https://replyalba.com/pt/EkShEr1oPs",
         }
@@ -602,8 +602,8 @@ export const QUIZ_DATA = {
         content: "당신은 연애에서도 개인의 자유와 독립성을 중시하는 타입이에요. 서로의 공간을 존중하며, 집착보다는 신뢰를 기반으로 한 관계를 선호합니다.",
         recommendation: "나의 공간을 지키되, 상대에게 관심과 애정을 표현하는 것도 잊지 마세요. 작은 표현이 관계를 더 따뜻하게 만들어줍니다.",
         product: {
-          name: "셀프 힐링 프로그램",
-          desc: "나를 사랑하는 것부터 시작하는 건강한 연애",
+          name: "레이디큐어 솔루션",
+          desc: "여성만의 말 못할 고민을 근본부터 케어",
           cta: "자세히 보기",
           url: "https://replyalba.com/pt/WsdU9oMhje",
         }
@@ -615,8 +615,8 @@ export const QUIZ_DATA = {
         content: "당신은 차분하고 안정적인 관계를 추구하는 타입이에요. 신뢰와 편안함을 가장 중요하게 생각하며, 꾸준한 사랑을 실천합니다.",
         recommendation: "안정적인 관계 속에서도 가끔 새로운 시도를 해보세요. 서프라이즈 데이트나 새로운 취미를 함께 시작하면 관계에 활력이 생겨요.",
         product: {
-          name: "커플 힐링 테라피",
-          desc: "더 깊고 안정적인 사랑을 위한 가이드",
+          name: "레이디큐어 솔루션 2",
+          desc: "더 당당한 관계를 위한 여성 시크릿 솔루션",
           cta: "지금 확인하기",
           url: "https://replyalba.com/pt/z6pRyceT7w",
         }
@@ -628,8 +628,8 @@ export const QUIZ_DATA = {
         content: "당신은 사랑에 깊이 빠지는 로맨티스트예요! 설렘과 감동을 중시하며, 연인에게 많은 애정을 쏟는 타입입니다.",
         recommendation: "풍부한 감성이 장점이지만, 때로는 현실적인 면도 함께 봐야 해요. 감정에 휘둘리지 않고 이성적으로 판단하는 연습도 해보세요.",
         product: {
-          name: "연애 감성 코칭",
-          desc: "감성과 이성의 균형을 찾는 연애 레시피",
+          name: "미즈케어 솔루션 4",
+          desc: "수술 없이 안전하게 관리하는 여성 건강",
           cta: "특별 혜택 보기",
           url: "https://replyalba.com/pt/SoLJ7OMizy",
         }
@@ -641,8 +641,8 @@ export const QUIZ_DATA = {
         content: "당신은 사랑에 올인하는 열정적인 연애인이에요! 연인에게 모든 것을 쏟아붓고, 함께하는 모든 순간을 소중히 여깁니다.",
         recommendation: "열정적인 사랑도 좋지만, 나만의 시간과 취미도 꼭 가지세요. 서로에게 숨 쉴 공간을 주는 것이 오히려 관계를 오래가게 만듭니다.",
         product: {
-          name: "건강한 연애 가이드",
-          desc: "열정을 지키면서도 균형 잡힌 사랑 만들기",
+          name: "미즈케어 솔루션 5",
+          desc: "행복한 부부생활을 위한 최상의 선택",
           cta: "무료 상담 받기",
           url: "https://replyalba.com/pt/Phjrq2zsy8",
         }
@@ -762,10 +762,10 @@ export const QUIZ_DATA = {
         content: "두 분은 전생에서도 인연이었을 거예요! 운명적으로 끌리는 사이이며, 서로에게 긍정적인 에너지를 줍니다. 이 인연을 소중히 여기세요.",
         recommendation: "좋은 인연이라도 노력 없이는 유지할 수 없어요. 감사하는 마음을 자주 표현하고, 서로를 위한 작은 정성을 잊지 마세요.",
         product: {
-          name: "커플 운세 프리미엄",
-          desc: "더 깊은 사주 분석으로 미래를 엿보기",
+          name: "미즈케어 솔루션 2",
+          desc: "부부관계 개선, 다시 시작하는 신혼 라이프",
           cta: "자세히 보기",
-          url: "https://replyalba.com/pt/Z1IJI9rY2c",
+          url: "https://replyalba.com/pt/Y1PHVwO7GO",
         }
       },
       {
@@ -775,10 +775,10 @@ export const QUIZ_DATA = {
         content: "분명 좋은 인연으로 만난 두 분이에요. 서로에게 긍정적 영향을 주고, 함께 성장할 수 있는 관계입니다.",
         recommendation: "서로의 장점을 인정하고 칭찬을 아끼지 마세요. 공통된 목표를 세우고 함께 노력하면 더 좋은 결과를 거둘 수 있습니다.",
         product: {
-          name: "운명 분석 리포트",
-          desc: "두 사람만을 위한 맞춤 운세 분석",
+          name: "미즈케어 솔루션 5",
+          desc: "행복한 부부생활을 위한 관계 컨디션 케어",
           cta: "지금 확인하기",
-          url: "https://replyalba.com/pt/IlnAem4ygW",
+          url: "https://replyalba.com/pt/Phjrq2zsy8",
         }
       },
       {
@@ -788,10 +788,10 @@ export const QUIZ_DATA = {
         content: "서로를 통해 많은 것을 배우는 관계예요. 쉽지만은 않지만, 이 관계를 통해 두 사람 모두 크게 성장할 수 있습니다.",
         recommendation: "인내심과 이해심이 필요한 관계입니다. 서로의 다른 점을 결점이 아닌 배움의 기회로 받아들여 보세요.",
         product: {
-          name: "관계 성장 프로그램",
-          desc: "함께 성장하며 더 단단해지는 사랑",
+          name: "우먼시크릿",
+          desc: "사랑받는 여자의 비밀, 지금 공개합니다",
           cta: "특별 혜택 보기",
-          url: "https://replyalba.com/pt/SNLg3ILPbd",
+          url: "https://replyalba.com/pt/YfcVFCdD21",
         }
       },
       {
@@ -801,10 +801,10 @@ export const QUIZ_DATA = {
         content: "운명이 쉬운 길을 내어주진 않았지만, 그만큼 큰 사랑을 배울 수 있는 관계입니다. 진심을 다한다면 두 사람 사이의 벽을 넘을 수 있어요.",
         recommendation: "대화와 소통이 무엇보다 중요합니다. 서로에 대한 기대를 솔직하게 나누고, 필요하다면 전문 상담도 고려해 보세요.",
         product: {
-          name: "사주 심층 상담",
-          desc: "운명을 읽고 사랑을 지키는 방법",
+          name: "우먼시크릿2",
+          desc: "더 깊고 진한 사랑을 위한 시크릿 관리",
           cta: "무료 상담 받기",
-          url: "https://replyalba.com/pt/WeWtmEo70h",
+          url: "https://replyalba.com/pt/xWHMHU09mP",
         }
       }
     ]
@@ -922,10 +922,10 @@ export const QUIZ_DATA = {
         content: "축하합니다! 당신은 연애에서 매우 건강한 심리 상태를 가지고 있어요. 상대를 신뢰하고, 독립적이면서도 따뜻한 관계를 유지할 수 있는 타입입니다.",
         recommendation: "이 건강한 심리 상태를 유지하세요! 상대에게도 안정적인 사랑을 베풀면서, 서로 성장할 수 있는 관계를 만들어 가세요.",
         product: {
-          name: "행복한 커플 마스터",
-          desc: "건강한 관계를 더 깊게 만드는 비결",
+          name: "미즈케어 솔루션 2",
+          desc: "부부관계 개선, 다시 시작하는 신혼 라이프",
           cta: "자세히 보기",
-          url: "https://replyalba.com/pt/MbTJlgNLg8",
+          url: "https://replyalba.com/pt/Y1PHVwO7GO",
         }
       },
       {
@@ -935,10 +935,10 @@ export const QUIZ_DATA = {
         content: "당신은 관계를 소중히 여기며, 연인과의 유대감을 중요하게 생각하는 타입이에요. 다만 때로는 상대의 반응에 민감할 수 있습니다.",
         recommendation: "상대의 행동 하나하나에 너무 의미를 부여하지 마세요. 자신의 가치를 먼저 인정하고 사랑하는 것이 건강한 관계의 시작이에요.",
         product: {
-          name: "자존감 회복 프로그램",
-          desc: "나를 사랑해야 사랑받을 수 있어요",
+          name: "레이디큐어 솔루션",
+          desc: "여성만의 말 못할 고민을 근본부터 케어",
           cta: "지금 확인하기",
-          url: "https://replyalba.com/pt/GnNKelUPTQ",
+          url: "https://replyalba.com/pt/WsdU9oMhje",
         }
       },
       {
@@ -948,10 +948,10 @@ export const QUIZ_DATA = {
         content: "사랑에 대한 갈망이 크고, 연인의 사랑을 확인받고 싶은 마음이 강한 타입이에요. 이것은 약점이 아니라, 사랑에 진지한 당신의 모습입니다.",
         recommendation: "불안한 감정이 올라올 때, 잠시 멈추고 심호흡해 보세요. 자기 자신에 대한 확신을 키우면 연애도 더 편안해져요. 취미 생활이나 자기계발에 투자해 보세요.",
         product: {
-          name: "마음 치유 테라피",
-          desc: "불안을 내려놓고 진정한 사랑을 만나기",
+          name: "우먼시크릿4",
+          desc: "관계 속 자신감을 높여주는 프리미엄 솔루션",
           cta: "특별 혜택 보기",
-          url: "https://replyalba.com/pt/WSueAH6gko",
+          url: "https://replyalba.com/pt/EkShEr1oPs",
         }
       },
       {
@@ -961,10 +961,10 @@ export const QUIZ_DATA = {
         content: "연인에 대한 강한 감정을 가지고 있지만, 그것이 때로는 불안과 집착으로 나타날 수 있어요. 이는 과거 경험이나 내면의 상처와 관련이 있을 수 있습니다.",
         recommendation: "전문 심리 상담을 받아보시길 권합니다. 나의 내면을 들여다보고 치유하는 과정이 필요합니다. 건강한 자기 사랑이 건강한 연애의 시작이에요.",
         product: {
-          name: "심리 상담 프로그램",
-          desc: "내면의 상처를 치유하고 건강한 사랑 시작하기",
+          name: "우먼시크릿2",
+          desc: "더 깊고 진한 사랑을 위한 시크릿 관리",
           cta: "무료 상담 받기",
-          url: "https://replyalba.com/pt/NGi7kc77mF",
+          url: "https://replyalba.com/pt/xWHMHU09mP",
         }
       }
     ]
@@ -1454,10 +1454,10 @@ export const QUIZ_DATA = {
         content: "바디라인에 대한 고민이 큰 상태입니다. 전문적이고 체계적인 관리를 시작해 보세요.",
         recommendation: "전문가 상담을 통해 나에게 맞는 바디 관리 프로그램을 설계하세요. 꾸준한 관리가 가장 중요합니다.",
         product: {
-          name: "우먼시크릿",
-          desc: "사랑받는 여자의 비밀, 지금 공개합니다",
+          name: "올리모아 2",
+          desc: "아름다운 몸매를 위한 스마트한 선택",
           cta: "전문 솔루션 보기",
-          url: "https://replyalba.com/pt/YfcVFCdD21",
+          url: "https://replyalba.com/pt/yN552PODWx",
         }
       }
     ]
@@ -2093,10 +2093,10 @@ export const QUIZ_DATA = {
         content: "붓기와 무거움이 반복되는 상태입니다. 식습관, 활동량, 휴식 패턴을 함께 관리해야 합니다.",
         recommendation: "하체 스트레칭과 종아리 운동을 루틴화하고, 붓기가 갑자기 심해지면 원인 확인을 권합니다.",
         product: {
-          name: "바스트핏 솔루션",
-          desc: "자연스럽게 차오르는 바스트 볼륨 자신감",
+          name: "올리모아",
+          desc: "흐트러진 바디라인을 살려주는 집중 솔루션",
           cta: "라인 케어 확인하기",
-          url: "https://replyalba.com/pt/MNGGagfIeF",
+          url: "https://replyalba.com/pt/C7qCzRVOZ8",
         }
       },
       {
@@ -2106,10 +2106,10 @@ export const QUIZ_DATA = {
         content: "하체 붓기와 순환 불편감이 높은 수준입니다. 단순 피로인지 확인이 필요합니다.",
         recommendation: "한쪽 다리만 붓거나 통증, 열감이 동반되면 즉시 의료 상담을 받으세요. 평소에는 압박, 휴식, 운동 루틴을 함께 관리하세요.",
         product: {
-          name: "우먼시크릿4",
-          desc: "당신의 가치를 높여주는 프리미엄 솔루션",
+          name: "올리모아 2",
+          desc: "아름다운 몸매를 위한 스마트한 선택",
           cta: "맞춤 케어 보기",
-          url: "https://replyalba.com/pt/EkShEr1oPs",
+          url: "https://replyalba.com/pt/yN552PODWx",
         }
       }
     ]
@@ -2255,10 +2255,10 @@ export const QUIZ_DATA = {
         content: "수면 부족, 스트레스, 극단적 식단이 반복되며 몸의 리듬이 흔들렸을 가능성이 있습니다.",
         recommendation: "무리한 절식보다 단백질과 근력 운동을 회복하고, 수면 시간을 먼저 확보해 보세요.",
         product: {
-          name: "CR-5",
-          desc: "주름·기미·잡티 고민 한 번에 해결하세요",
+          name: "올리모아",
+          desc: "흐트러진 바디라인을 살려주는 집중 솔루션",
           cta: "집중 케어 보기",
-          url: "https://replyalba.com/pt/JNyIgk9t32",
+          url: "https://replyalba.com/pt/C7qCzRVOZ8",
         }
       },
       {
@@ -2268,10 +2268,10 @@ export const QUIZ_DATA = {
         content: "감정적 식사, 극단적 제한, 수면 부족이 복합적으로 작용할 수 있습니다. 계획을 더 작고 안전하게 다시 설계해야 합니다.",
         recommendation: "식사 기록과 수면 기록을 1주일만 남겨 원인을 확인하세요. 폭식이나 강박이 반복되면 전문가 상담도 고려하세요.",
         product: {
-          name: "우먼시크릿5",
-          desc: "남편 몰래 시작하는 놀라운 신체 변화",
+          name: "올리모아 2",
+          desc: "아름다운 몸매를 위한 스마트한 선택",
           cta: "맞춤 관리 확인하기",
-          url: "https://replyalba.com/pt/WSueAH6gko",
+          url: "https://replyalba.com/pt/yN552PODWx",
         }
       }
     ]
@@ -2916,10 +2916,10 @@ export const QUIZ_DATA = {
         content: "변비와 복부 불편이 높은 수준입니다. 장기간 지속된다면 원인 확인이 필요합니다.",
         recommendation: "혈변, 심한 복통, 급격한 체중 변화, 장기간 변비가 있으면 의료 상담을 받으세요. 생활 습관도 단계적으로 조정해야 합니다.",
         product: {
-          name: "CR-5",
-          desc: "주름·기미·잡티 고민 한 번에 해결하세요",
-          cta: "집중 케어 확인하기",
-          url: "https://replyalba.com/pt/JNyIgk9t32",
+          name: "공후하결",
+          desc: "피부 근본부터 채우는 프리미엄 영양 케어",
+          cta: "이너 케어 확인하기",
+          url: "https://replyalba.com/pt/UKfoQbTwGI",
         }
       }
     ]

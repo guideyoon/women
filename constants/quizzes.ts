@@ -1789,5 +1789,1139 @@ export const QUIZ_DATA = {
         }
       }
     ]
+  },
+  "hair-scalp": {
+    title: "여성 탈모·두피 상태 테스트",
+    description: "모발 빠짐, 두피 민감도, 생활 습관을 바탕으로 현재 두피 컨디션을 점검해 보세요.",
+    questions: [
+      {
+        id: 1,
+        question: "최근 머리카락이 평소보다 많이 빠진다고 느끼나요?",
+        icon: "Sparkles",
+        options: [
+          { text: "거의 느끼지 않는다", score: 0 },
+          { text: "가끔 많아진 것 같다", score: 1 },
+          { text: "자주 많다고 느낀다", score: 2 },
+          { text: "매일 눈에 띄게 빠진다", score: 3 },
+        ],
+      },
+      {
+        id: 2,
+        question: "정수리나 가르마가 넓어 보이나요?",
+        options: [
+          { text: "전혀 그렇지 않다", score: 0 },
+          { text: "조금 신경 쓰인다", score: 1 },
+          { text: "사진에서 자주 보인다", score: 2 },
+          { text: "확연히 넓어졌다", score: 3 },
+        ],
+      },
+      {
+        id: 3,
+        question: "두피 가려움이나 따가움이 있나요?",
+        options: [
+          { text: "거의 없다", score: 0 },
+          { text: "가끔 있다", score: 1 },
+          { text: "자주 있다", score: 2 },
+          { text: "매우 심하고 불편하다", score: 3 },
+        ],
+      },
+      {
+        id: 4,
+        question: "두피 유분이나 냄새가 빨리 올라오나요?",
+        options: [
+          { text: "하루 종일 괜찮다", score: 0 },
+          { text: "저녁쯤 신경 쓰인다", score: 1 },
+          { text: "반나절이면 올라온다", score: 2 },
+          { text: "샴푸 직후에도 불편하다", score: 3 },
+        ],
+      },
+      {
+        id: 5,
+        question: "비듬이나 각질이 자주 보이나요?",
+        options: [
+          { text: "거의 없다", score: 0 },
+          { text: "건조할 때만 있다", score: 1 },
+          { text: "자주 보인다", score: 2 },
+          { text: "늘 눈에 띄고 가렵다", score: 3 },
+        ],
+      },
+      {
+        id: 6,
+        question: "펌, 염색, 열 스타일링을 자주 하나요?",
+        options: [
+          { text: "거의 하지 않는다", score: 0 },
+          { text: "가끔 한다", score: 1 },
+          { text: "월 1회 이상 한다", score: 2 },
+          { text: "자주 반복한다", score: 3 },
+        ],
+      },
+      {
+        id: 7,
+        question: "최근 수면 부족이나 스트레스가 심했나요?",
+        icon: "Moon",
+        options: [
+          { text: "잘 관리하고 있다", score: 0 },
+          { text: "가끔 피곤하다", score: 1 },
+          { text: "자주 부족하다", score: 2 },
+          { text: "거의 매일 심하다", score: 3 },
+        ],
+      },
+      {
+        id: 8,
+        question: "단백질이나 영양 섭취가 부족하다고 느끼나요?",
+        options: [
+          { text: "균형 있게 먹는다", score: 0 },
+          { text: "조금 부족할 때가 있다", score: 1 },
+          { text: "자주 대충 먹는다", score: 2 },
+          { text: "식사가 매우 불규칙하다", score: 3 },
+        ],
+      },
+      {
+        id: 9,
+        question: "모발이 가늘고 힘없이 처지나요?",
+        options: [
+          { text: "탄탄한 편이다", score: 0 },
+          { text: "조금 힘이 없다", score: 1 },
+          { text: "가늘어진 느낌이 크다", score: 2 },
+          { text: "볼륨이 거의 없다", score: 3 },
+        ],
+      },
+      {
+        id: 10,
+        question: "가족력이나 호르몬 변화로 인한 탈모 걱정이 있나요?",
+        options: [
+          { text: "거의 없다", score: 0 },
+          { text: "조금 걱정된다", score: 1 },
+          { text: "분명한 걱정이 있다", score: 2 },
+          { text: "이미 변화가 뚜렷하다", score: 3 },
+        ],
+      },
+    ],
+    results: [
+      {
+        minScore: 0,
+        maxScore: 7,
+        title: "🟢 안정적인 두피 컨디션",
+        content: "현재 두피와 모발 컨디션은 비교적 안정적인 편입니다. 좋은 습관을 유지하면서 예방 관리에 집중해 주세요.",
+        recommendation: "자극이 적은 샴푸, 충분한 수면, 단백질 섭취를 유지하고 펌·염색 빈도를 조절해 보세요.",
+        product: {
+          name: "천수애진",
+          desc: "마시는 고함량 콜라겐으로 탱탱한 피부 재생",
+          cta: "이너 케어 확인하기",
+          url: "https://replyalba.com/pt/SanlazetIb",
+        }
+      },
+      {
+        minScore: 8,
+        maxScore: 14,
+        title: "🟡 초기 두피 관리 필요",
+        content: "모발 빠짐이나 두피 민감 신호가 조금씩 보입니다. 지금 관리하면 악화를 늦출 수 있어요.",
+        recommendation: "두피 자극을 줄이고, 수면과 영양을 먼저 정리하세요. 두피 보습과 진정 케어도 함께 권합니다.",
+        product: {
+          name: "천수윤진",
+          desc: "국내 최초 '녹용 줄기세포 배양액' 함유 앰플",
+          cta: "집중 케어 보기",
+          url: "https://replyalba.com/pt/ILAPhWg9Zx",
+        }
+      },
+      {
+        minScore: 15,
+        maxScore: 22,
+        title: "🟠 탈모·두피 스트레스 주의",
+        content: "두피 자극과 모발 약화 신호가 뚜렷합니다. 생활 습관과 두피 케어를 동시에 점검해야 합니다.",
+        recommendation: "열 스타일링과 잦은 시술을 줄이고, 두피 상태가 지속적으로 나빠지면 전문 상담을 받아보세요.",
+        product: {
+          name: "스템벨 자생력 앰플",
+          desc: "피부 속부터 차오르는 프리미엄 광채 에너지",
+          cta: "회복 케어 시작하기",
+          url: "https://replyalba.com/pt/CzCyUNUG4o",
+        }
+      },
+      {
+        minScore: 23,
+        maxScore: 30,
+        title: "🔴 적극적인 두피 점검 권장",
+        content: "모발 빠짐과 두피 불편감이 높은 수준입니다. 자가 관리만으로 버티기보다 원인 점검이 필요합니다.",
+        recommendation: "두피 염증, 호르몬 변화, 영양 결핍 가능성을 확인하고 필요하면 피부과나 전문 기관 상담을 권합니다.",
+        product: {
+          name: "스템엔셀 미미셀 시그니처",
+          desc: "피부 시간을 되돌리는 줄기세포 과학적 관리",
+          cta: "프리미엄 케어 보기",
+          url: "https://replyalba.com/pt/Rzqo5tlz9p",
+        }
+      }
+    ]
+  },
+  "leg-circulation": {
+    title: "붓기·하체순환 테스트",
+    description: "다리 붓기, 무거움, 생활 패턴을 통해 하체 순환 컨디션을 확인해 보세요.",
+    questions: [
+      {
+        id: 1,
+        question: "저녁이 되면 다리가 붓거나 무겁나요?",
+        icon: "Activity",
+        options: [
+          { text: "거의 없다", score: 0 },
+          { text: "가끔 있다", score: 1 },
+          { text: "자주 있다", score: 2 },
+          { text: "매일 심하다", score: 3 },
+        ],
+      },
+      {
+        id: 2,
+        question: "양말 자국이 오래 남나요?",
+        options: [
+          { text: "거의 남지 않는다", score: 0 },
+          { text: "가끔 남는다", score: 1 },
+          { text: "자주 오래 남는다", score: 2 },
+          { text: "깊게 남고 잘 사라지지 않는다", score: 3 },
+        ],
+      },
+      {
+        id: 3,
+        question: "오래 앉거나 서 있는 시간이 많나요?",
+        options: [
+          { text: "중간중간 잘 움직인다", score: 0 },
+          { text: "조금 긴 편이다", score: 1 },
+          { text: "하루 대부분 그렇다", score: 2 },
+          { text: "거의 움직이지 못한다", score: 3 },
+        ],
+      },
+      {
+        id: 4,
+        question: "손발이 차거나 저린 느낌이 있나요?",
+        options: [
+          { text: "거의 없다", score: 0 },
+          { text: "가끔 있다", score: 1 },
+          { text: "자주 있다", score: 2 },
+          { text: "항상 불편하다", score: 3 },
+        ],
+      },
+      {
+        id: 5,
+        question: "짠 음식이나 야식을 자주 먹나요?",
+        options: [
+          { text: "거의 먹지 않는다", score: 0 },
+          { text: "주 1~2회 정도", score: 1 },
+          { text: "주 3~4회 정도", score: 2 },
+          { text: "거의 매일 먹는다", score: 3 },
+        ],
+      },
+      {
+        id: 6,
+        question: "물을 충분히 마시나요?",
+        icon: "Droplets",
+        options: [
+          { text: "충분히 마신다", score: 0 },
+          { text: "보통이다", score: 1 },
+          { text: "부족한 편이다", score: 2 },
+          { text: "거의 마시지 않는다", score: 3 },
+        ],
+      },
+      {
+        id: 7,
+        question: "하체 운동이나 스트레칭을 꾸준히 하나요?",
+        options: [
+          { text: "주 3회 이상 한다", score: 0 },
+          { text: "주 1~2회 한다", score: 1 },
+          { text: "가끔 한다", score: 2 },
+          { text: "거의 하지 않는다", score: 3 },
+        ],
+      },
+      {
+        id: 8,
+        question: "생리 전이나 피곤할 때 붓기가 심해지나요?",
+        options: [
+          { text: "거의 없다", score: 0 },
+          { text: "조금 있다", score: 1 },
+          { text: "눈에 띄게 심해진다", score: 2 },
+          { text: "일상에 불편할 정도다", score: 3 },
+        ],
+      },
+      {
+        id: 9,
+        question: "다리 라인이 쉽게 변하거나 셀룰라이트가 신경 쓰이나요?",
+        options: [
+          { text: "거의 신경 쓰이지 않는다", score: 0 },
+          { text: "조금 신경 쓰인다", score: 1 },
+          { text: "눈에 띄는 편이다", score: 2 },
+          { text: "매우 심하게 고민된다", score: 3 },
+        ],
+      },
+      {
+        id: 10,
+        question: "마사지나 반신욕 후 다리가 가벼워지는 편인가요?",
+        options: [
+          { text: "평소에도 가벼워 필요성을 못 느낀다", score: 0 },
+          { text: "조금 가벼워진다", score: 1 },
+          { text: "확실히 차이가 난다", score: 2 },
+          { text: "하지 않으면 너무 무겁다", score: 3 },
+        ],
+      },
+    ],
+    results: [
+      {
+        minScore: 0,
+        maxScore: 7,
+        title: "🟢 가벼운 하체 컨디션",
+        content: "붓기와 순환 부담이 낮은 편입니다. 현재의 활동량과 식습관을 유지해 주세요.",
+        recommendation: "가벼운 산책, 수분 섭취, 짠 음식 조절만 꾸준히 해도 좋은 상태를 유지할 수 있습니다.",
+        product: {
+          name: "올리모아",
+          desc: "흐트러진 바디라인을 살려주는 집중 솔루션",
+          cta: "바디 케어 보기",
+          url: "https://replyalba.com/pt/C7qCzRVOZ8",
+        }
+      },
+      {
+        minScore: 8,
+        maxScore: 14,
+        title: "🟡 붓기 관리 시작",
+        content: "하체가 무겁거나 붓는 신호가 조금씩 나타납니다. 생활 리듬을 정리할 시점입니다.",
+        recommendation: "오래 앉아 있을 때는 1시간마다 일어나고, 저녁 짠 음식과 야식을 줄여 보세요.",
+        product: {
+          name: "올리모아 2",
+          desc: "아름다운 몸매를 위한 스마트한 선택",
+          cta: "순환 케어 시작하기",
+          url: "https://replyalba.com/pt/yN552PODWx",
+        }
+      },
+      {
+        minScore: 15,
+        maxScore: 22,
+        title: "🟠 하체순환 주의",
+        content: "붓기와 무거움이 반복되는 상태입니다. 식습관, 활동량, 휴식 패턴을 함께 관리해야 합니다.",
+        recommendation: "하체 스트레칭과 종아리 운동을 루틴화하고, 붓기가 갑자기 심해지면 원인 확인을 권합니다.",
+        product: {
+          name: "바스트핏 솔루션",
+          desc: "자연스럽게 차오르는 바스트 볼륨 자신감",
+          cta: "라인 케어 확인하기",
+          url: "https://replyalba.com/pt/MNGGagfIeF",
+        }
+      },
+      {
+        minScore: 23,
+        maxScore: 30,
+        title: "🔴 적극적인 순환 점검 필요",
+        content: "하체 붓기와 순환 불편감이 높은 수준입니다. 단순 피로인지 확인이 필요합니다.",
+        recommendation: "한쪽 다리만 붓거나 통증, 열감이 동반되면 즉시 의료 상담을 받으세요. 평소에는 압박, 휴식, 운동 루틴을 함께 관리하세요.",
+        product: {
+          name: "우먼시크릿4",
+          desc: "당신의 가치를 높여주는 프리미엄 솔루션",
+          cta: "맞춤 케어 보기",
+          url: "https://replyalba.com/pt/EkShEr1oPs",
+        }
+      }
+    ]
+  },
+  "diet-failure": {
+    title: "다이어트 실패 원인 테스트",
+    description: "식습관, 운동, 수면, 스트레스 패턴을 통해 감량을 방해하는 원인을 찾아보세요.",
+    questions: [
+      {
+        id: 1,
+        question: "식사 시간을 규칙적으로 지키나요?",
+        options: [
+          { text: "대체로 규칙적이다", score: 0 },
+          { text: "가끔 흔들린다", score: 1 },
+          { text: "자주 불규칙하다", score: 2 },
+          { text: "거의 일정하지 않다", score: 3 },
+        ],
+      },
+      {
+        id: 2,
+        question: "야식이나 간식을 얼마나 자주 먹나요?",
+        options: [
+          { text: "거의 먹지 않는다", score: 0 },
+          { text: "주 1~2회 정도", score: 1 },
+          { text: "주 3~4회 정도", score: 2 },
+          { text: "거의 매일 먹는다", score: 3 },
+        ],
+      },
+      {
+        id: 3,
+        question: "단백질을 충분히 챙겨 먹나요?",
+        options: [
+          { text: "매 끼니 챙긴다", score: 0 },
+          { text: "하루 한 끼는 챙긴다", score: 1 },
+          { text: "가끔 챙긴다", score: 2 },
+          { text: "거의 챙기지 않는다", score: 3 },
+        ],
+      },
+      {
+        id: 4,
+        question: "운동 루틴이 있나요?",
+        icon: "Dumbbell",
+        options: [
+          { text: "주 3회 이상 한다", score: 0 },
+          { text: "주 1~2회 한다", score: 1 },
+          { text: "가끔 한다", score: 2 },
+          { text: "거의 하지 않는다", score: 3 },
+        ],
+      },
+      {
+        id: 5,
+        question: "감정적으로 먹는 일이 있나요?",
+        options: [
+          { text: "거의 없다", score: 0 },
+          { text: "가끔 있다", score: 1 },
+          { text: "자주 있다", score: 2 },
+          { text: "스트레스 때마다 먹는다", score: 3 },
+        ],
+      },
+      {
+        id: 6,
+        question: "수면 시간이 부족한 편인가요?",
+        icon: "Moon",
+        options: [
+          { text: "충분히 잔다", score: 0 },
+          { text: "가끔 부족하다", score: 1 },
+          { text: "자주 부족하다", score: 2 },
+          { text: "만성적으로 부족하다", score: 3 },
+        ],
+      },
+      {
+        id: 7,
+        question: "짧은 기간에 무리한 식단을 반복하나요?",
+        options: [
+          { text: "하지 않는다", score: 0 },
+          { text: "가끔 한다", score: 1 },
+          { text: "자주 반복한다", score: 2 },
+          { text: "항상 극단적으로 한다", score: 3 },
+        ],
+      },
+      {
+        id: 8,
+        question: "음료나 커피로 당을 자주 섭취하나요?",
+        options: [
+          { text: "거의 없다", score: 0 },
+          { text: "주 1~2회 정도", score: 1 },
+          { text: "하루 1잔 정도", score: 2 },
+          { text: "하루 여러 잔 마신다", score: 3 },
+        ],
+      },
+      {
+        id: 9,
+        question: "체중보다 눈바디나 체지방 변화를 함께 보나요?",
+        options: [
+          { text: "여러 지표를 함께 본다", score: 0 },
+          { text: "가끔 확인한다", score: 1 },
+          { text: "대부분 체중만 본다", score: 2 },
+          { text: "숫자에 크게 흔들린다", score: 3 },
+        ],
+      },
+      {
+        id: 10,
+        question: "다이어트 계획을 2주 이상 꾸준히 유지하나요?",
+        options: [
+          { text: "잘 유지한다", score: 0 },
+          { text: "대체로 유지한다", score: 1 },
+          { text: "중간에 자주 흔들린다", score: 2 },
+          { text: "며칠 만에 포기한다", score: 3 },
+        ],
+      },
+    ],
+    results: [
+      {
+        minScore: 0,
+        maxScore: 7,
+        title: "🟢 유지력 좋은 감량 타입",
+        content: "식사와 활동 리듬이 안정적입니다. 급한 변화보다 지속 가능한 루틴을 이어가면 좋습니다.",
+        recommendation: "단백질, 수분, 근력 운동을 유지하고 체중보다 허리둘레와 컨디션 변화를 함께 보세요.",
+        product: {
+          name: "올리모아",
+          desc: "흐트러진 바디라인을 살려주는 집중 솔루션",
+          cta: "라인 관리 보기",
+          url: "https://replyalba.com/pt/C7qCzRVOZ8",
+        }
+      },
+      {
+        minScore: 8,
+        maxScore: 14,
+        title: "🟡 습관 조정형",
+        content: "작은 습관 몇 가지가 감량 속도를 늦추고 있을 수 있습니다. 식사 시간과 간식 패턴부터 정리해 보세요.",
+        recommendation: "야식, 달달한 음료, 불규칙한 식사를 먼저 줄이고 2주 단위로 실천 가능한 목표를 세우세요.",
+        product: {
+          name: "올리모아 2",
+          desc: "아름다운 몸매를 위한 스마트한 선택",
+          cta: "습관 케어 시작하기",
+          url: "https://replyalba.com/pt/yN552PODWx",
+        }
+      },
+      {
+        minScore: 15,
+        maxScore: 22,
+        title: "🟠 대사 리듬 흔들림 타입",
+        content: "수면 부족, 스트레스, 극단적 식단이 반복되며 몸의 리듬이 흔들렸을 가능성이 있습니다.",
+        recommendation: "무리한 절식보다 단백질과 근력 운동을 회복하고, 수면 시간을 먼저 확보해 보세요.",
+        product: {
+          name: "CR-5",
+          desc: "주름·기미·잡티 고민 한 번에 해결하세요",
+          cta: "집중 케어 보기",
+          url: "https://replyalba.com/pt/JNyIgk9t32",
+        }
+      },
+      {
+        minScore: 23,
+        maxScore: 30,
+        title: "🔴 실패 반복 원인 점검 필요",
+        content: "감정적 식사, 극단적 제한, 수면 부족이 복합적으로 작용할 수 있습니다. 계획을 더 작고 안전하게 다시 설계해야 합니다.",
+        recommendation: "식사 기록과 수면 기록을 1주일만 남겨 원인을 확인하세요. 폭식이나 강박이 반복되면 전문가 상담도 고려하세요.",
+        product: {
+          name: "우먼시크릿5",
+          desc: "남편 몰래 시작하는 놀라운 신체 변화",
+          cta: "맞춤 관리 확인하기",
+          url: "https://replyalba.com/pt/WSueAH6gko",
+        }
+      }
+    ]
+  },
+  "dark-spot-risk": {
+    title: "기미·잡티 위험도 테스트",
+    description: "자외선 습관, 피부 회복력, 색소 흔적을 통해 기미·잡티 위험도를 점검해 보세요.",
+    questions: [
+      {
+        id: 1,
+        question: "자외선 차단제를 매일 바르나요?",
+        icon: "Shield",
+        options: [
+          { text: "매일 충분히 바른다", score: 0 },
+          { text: "외출할 때는 바른다", score: 1 },
+          { text: "가끔 잊는다", score: 2 },
+          { text: "거의 바르지 않는다", score: 3 },
+        ],
+      },
+      {
+        id: 2,
+        question: "잡티나 색소 자국이 오래 남나요?",
+        options: [
+          { text: "금방 옅어진다", score: 0 },
+          { text: "조금 남는다", score: 1 },
+          { text: "오래 남는 편이다", score: 2 },
+          { text: "거의 사라지지 않는다", score: 3 },
+        ],
+      },
+      {
+        id: 3,
+        question: "최근 얼굴 톤이 칙칙해졌다고 느끼나요?",
+        options: [
+          { text: "전혀 아니다", score: 0 },
+          { text: "가끔 그렇다", score: 1 },
+          { text: "자주 느낀다", score: 2 },
+          { text: "항상 칙칙하다", score: 3 },
+        ],
+      },
+      {
+        id: 4,
+        question: "야외 활동이나 운전 시간이 많은 편인가요?",
+        options: [
+          { text: "짧은 편이다", score: 0 },
+          { text: "보통이다", score: 1 },
+          { text: "긴 편이다", score: 2 },
+          { text: "매우 많다", score: 3 },
+        ],
+      },
+      {
+        id: 5,
+        question: "피부 트러블 후 갈색 자국이 남나요?",
+        options: [
+          { text: "거의 남지 않는다", score: 0 },
+          { text: "가끔 남는다", score: 1 },
+          { text: "자주 남는다", score: 2 },
+          { text: "작은 트러블도 오래 남는다", score: 3 },
+        ],
+      },
+      {
+        id: 6,
+        question: "수면 부족이나 피로가 잦나요?",
+        icon: "Moon",
+        options: [
+          { text: "잘 회복한다", score: 0 },
+          { text: "가끔 피곤하다", score: 1 },
+          { text: "자주 피곤하다", score: 2 },
+          { text: "늘 피로하다", score: 3 },
+        ],
+      },
+      {
+        id: 7,
+        question: "보습과 장벽 관리를 꾸준히 하나요?",
+        options: [
+          { text: "꾸준히 한다", score: 0 },
+          { text: "대체로 한다", score: 1 },
+          { text: "자주 놓친다", score: 2 },
+          { text: "거의 하지 않는다", score: 3 },
+        ],
+      },
+      {
+        id: 8,
+        question: "임신, 출산, 호르몬 변화 이후 색소 고민이 늘었나요?",
+        options: [
+          { text: "해당 없거나 변화 없다", score: 0 },
+          { text: "조금 늘었다", score: 1 },
+          { text: "눈에 띄게 늘었다", score: 2 },
+          { text: "매우 심해졌다", score: 3 },
+        ],
+      },
+      {
+        id: 9,
+        question: "피부를 문지르거나 자극적인 관리를 자주 하나요?",
+        options: [
+          { text: "거의 하지 않는다", score: 0 },
+          { text: "가끔 한다", score: 1 },
+          { text: "자주 한다", score: 2 },
+          { text: "강한 관리를 반복한다", score: 3 },
+        ],
+      },
+      {
+        id: 10,
+        question: "현재 기미·잡티가 확산되는 느낌이 있나요?",
+        options: [
+          { text: "전혀 없다", score: 0 },
+          { text: "조금 있다", score: 1 },
+          { text: "범위가 넓어졌다", score: 2 },
+          { text: "빠르게 늘고 있다", score: 3 },
+        ],
+      },
+    ],
+    results: [
+      {
+        minScore: 0,
+        maxScore: 7,
+        title: "🟢 낮은 색소 위험도",
+        content: "기미·잡티 위험이 낮은 편입니다. 지금처럼 자외선 차단과 보습을 유지해 주세요.",
+        recommendation: "아침 자외선 차단, 저녁 보습, 충분한 수면을 기본 루틴으로 유지하세요.",
+        product: {
+          name: "MS-II PLUS",
+          desc: "세월의 흔적을 지우는 고기능성 스킨케어",
+          cta: "피부 케어 보기",
+          url: "https://replyalba.com/pt/IGBX5btayE",
+        }
+      },
+      {
+        minScore: 8,
+        maxScore: 14,
+        title: "🟡 예방 관리 필요",
+        content: "색소 흔적이 남기 쉬운 습관이 조금 있습니다. 예방 루틴을 강화할 시점입니다.",
+        recommendation: "자외선 차단제를 충분히 바르고, 트러블을 만지지 않으며, 미백·진정 케어를 병행해 보세요.",
+        product: {
+          name: "CR-5",
+          desc: "주름·기미·잡티 고민 한 번에 해결하세요",
+          cta: "잡티 케어 시작하기",
+          url: "https://replyalba.com/pt/JNyIgk9t32",
+        }
+      },
+      {
+        minScore: 15,
+        maxScore: 22,
+        title: "🟠 색소 침착 주의",
+        content: "기미·잡티가 남거나 넓어질 가능성이 높은 상태입니다. 자극을 줄이고 집중 케어가 필요합니다.",
+        recommendation: "낮에는 차단, 밤에는 회복 중심으로 루틴을 나누고 강한 스크럽이나 자극 관리는 피하세요.",
+        product: {
+          name: "스템엔셀 미미셀 시그니처",
+          desc: "피부 시간을 되돌리는 줄기세포 과학적 관리",
+          cta: "집중 관리 보기",
+          url: "https://replyalba.com/pt/Rzqo5tlz9p",
+        }
+      },
+      {
+        minScore: 23,
+        maxScore: 30,
+        title: "🔴 적극적인 색소 관리 권장",
+        content: "색소 고민이 강하게 진행될 수 있는 상태입니다. 홈케어와 함께 전문 상담을 고려해 보세요.",
+        recommendation: "기미가 갑자기 진해지거나 넓어지면 피부과 상담을 권합니다. 자외선 차단은 매일 반복해야 합니다.",
+        product: {
+          name: "천수윤진2",
+          desc: "바를수록 어려지는 기적의 피부 솔루션",
+          cta: "프리미엄 케어 보기",
+          url: "https://replyalba.com/pt/Sxw8G15GMU",
+        }
+      }
+    ]
+  },
+  "sleep-stress": {
+    title: "수면·스트레스 회복력 테스트",
+    description: "수면의 질, 피로 회복, 스트레스 반응을 통해 현재 회복력을 점검해 보세요.",
+    questions: [
+      {
+        id: 1,
+        question: "잠들기까지 시간이 오래 걸리나요?",
+        icon: "Moon",
+        options: [
+          { text: "금방 잠든다", score: 0 },
+          { text: "가끔 오래 걸린다", score: 1 },
+          { text: "자주 30분 이상 걸린다", score: 2 },
+          { text: "거의 매일 오래 걸린다", score: 3 },
+        ],
+      },
+      {
+        id: 2,
+        question: "자고 일어나도 피곤한가요?",
+        options: [
+          { text: "개운하다", score: 0 },
+          { text: "가끔 피곤하다", score: 1 },
+          { text: "자주 피곤하다", score: 2 },
+          { text: "항상 피곤하다", score: 3 },
+        ],
+      },
+      {
+        id: 3,
+        question: "밤중에 자주 깨나요?",
+        options: [
+          { text: "거의 깨지 않는다", score: 0 },
+          { text: "가끔 깬다", score: 1 },
+          { text: "자주 깬다", score: 2 },
+          { text: "여러 번 깨고 다시 잠들기 어렵다", score: 3 },
+        ],
+      },
+      {
+        id: 4,
+        question: "일상 스트레스가 몸으로 느껴지나요?",
+        icon: "Brain",
+        options: [
+          { text: "잘 관리된다", score: 0 },
+          { text: "가끔 느낀다", score: 1 },
+          { text: "자주 두통이나 긴장감이 있다", score: 2 },
+          { text: "몸이 늘 긴장되어 있다", score: 3 },
+        ],
+      },
+      {
+        id: 5,
+        question: "카페인을 오후 늦게도 마시나요?",
+        options: [
+          { text: "거의 마시지 않는다", score: 0 },
+          { text: "가끔 마신다", score: 1 },
+          { text: "자주 마신다", score: 2 },
+          { text: "매일 여러 잔 마신다", score: 3 },
+        ],
+      },
+      {
+        id: 6,
+        question: "잠들기 전 휴대폰을 오래 보나요?",
+        options: [
+          { text: "거의 보지 않는다", score: 0 },
+          { text: "10분 정도 본다", score: 1 },
+          { text: "30분 이상 본다", score: 2 },
+          { text: "잠들 때까지 본다", score: 3 },
+        ],
+      },
+      {
+        id: 7,
+        question: "주말에 몰아서 자는 편인가요?",
+        options: [
+          { text: "평일에도 충분히 잔다", score: 0 },
+          { text: "가끔 보충한다", score: 1 },
+          { text: "주말마다 몰아 잔다", score: 2 },
+          { text: "몰아 자도 회복이 안 된다", score: 3 },
+        ],
+      },
+      {
+        id: 8,
+        question: "작은 일에도 예민하게 반응하나요?",
+        options: [
+          { text: "대체로 안정적이다", score: 0 },
+          { text: "가끔 예민하다", score: 1 },
+          { text: "자주 예민하다", score: 2 },
+          { text: "감정 조절이 어렵다", score: 3 },
+        ],
+      },
+      {
+        id: 9,
+        question: "쉬는 시간을 의식적으로 확보하나요?",
+        options: [
+          { text: "매일 확보한다", score: 0 },
+          { text: "가끔 확보한다", score: 1 },
+          { text: "잘 못 쉰다", score: 2 },
+          { text: "거의 쉬지 못한다", score: 3 },
+        ],
+      },
+      {
+        id: 10,
+        question: "피로가 피부나 소화 컨디션에 영향을 주나요?",
+        options: [
+          { text: "거의 없다", score: 0 },
+          { text: "가끔 있다", score: 1 },
+          { text: "자주 있다", score: 2 },
+          { text: "항상 영향을 받는다", score: 3 },
+        ],
+      },
+    ],
+    results: [
+      {
+        minScore: 0,
+        maxScore: 7,
+        title: "🟢 회복력 안정형",
+        content: "수면과 스트레스 회복력이 안정적인 편입니다. 현재의 생활 리듬을 유지해 주세요.",
+        recommendation: "취침 시간을 일정하게 유지하고, 가벼운 스트레칭이나 명상으로 회복 루틴을 강화해 보세요.",
+        product: {
+          name: "공후하결",
+          desc: "피부 근본부터 채우는 프리미엄 영양 케어",
+          cta: "영양 케어 보기",
+          url: "https://replyalba.com/pt/UKfoQbTwGI",
+        }
+      },
+      {
+        minScore: 8,
+        maxScore: 14,
+        title: "🟡 피로 누적 시작",
+        content: "수면의 질이나 스트레스 회복이 조금 흔들리고 있습니다. 작은 습관 교정이 필요합니다.",
+        recommendation: "오후 카페인, 취침 전 화면 사용, 불규칙한 수면 시간을 먼저 줄여 보세요.",
+        product: {
+          name: "천수애진2",
+          desc: "속부터 채워지는 윤기와 보습의 결정체",
+          cta: "회복 케어 시작하기",
+          url: "https://replyalba.com/pt/PkcJmotCli",
+        }
+      },
+      {
+        minScore: 15,
+        maxScore: 22,
+        title: "🟠 스트레스 회복력 저하",
+        content: "피로와 스트레스가 누적되어 몸 컨디션에 영향을 주는 상태입니다. 회복 시간을 의식적으로 확보해야 합니다.",
+        recommendation: "수면 루틴을 고정하고, 하루 10분이라도 휴식 시간을 예약하세요. 증상이 지속되면 상담을 고려하세요.",
+        product: {
+          name: "스템벨",
+          desc: "인체 줄기세포 배양액으로 되찾는 자생력",
+          cta: "컨디션 케어 보기",
+          url: "https://replyalba.com/pt/yBXZ7Kddui",
+        }
+      },
+      {
+        minScore: 23,
+        maxScore: 30,
+        title: "🔴 회복 루틴 재설계 필요",
+        content: "수면 부족과 스트레스 반응이 높은 수준입니다. 장기화되면 몸과 마음의 회복력이 크게 떨어질 수 있습니다.",
+        recommendation: "불면, 불안, 무기력감이 지속되면 전문가 상담을 권합니다. 업무량, 수면, 카페인부터 우선 조정하세요.",
+        product: {
+          name: "천수애진",
+          desc: "마시는 고함량 콜라겐으로 탱탱한 피부 재생",
+          cta: "이너 회복 보기",
+          url: "https://replyalba.com/pt/SanlazetIb",
+        }
+      }
+    ]
+  },
+  "pms-condition": {
+    title: "PMS·생리 전 컨디션 테스트",
+    description: "생리 전 감정, 통증, 붓기, 피로 변화를 통해 월경 전 컨디션을 점검해 보세요.",
+    questions: [
+      {
+        id: 1,
+        question: "생리 전 감정 기복이 심해지나요?",
+        icon: "HeartPulse",
+        options: [
+          { text: "거의 없다", score: 0 },
+          { text: "가끔 있다", score: 1 },
+          { text: "자주 있다", score: 2 },
+          { text: "일상에 지장이 크다", score: 3 },
+        ],
+      },
+      {
+        id: 2,
+        question: "생리 전 아랫배나 허리 통증이 있나요?",
+        options: [
+          { text: "거의 없다", score: 0 },
+          { text: "약간 있다", score: 1 },
+          { text: "자주 불편하다", score: 2 },
+          { text: "통증이 심하다", score: 3 },
+        ],
+      },
+      {
+        id: 3,
+        question: "생리 전 붓기나 체중 증가가 느껴지나요?",
+        options: [
+          { text: "거의 없다", score: 0 },
+          { text: "조금 있다", score: 1 },
+          { text: "눈에 띄게 있다", score: 2 },
+          { text: "매우 심하다", score: 3 },
+        ],
+      },
+      {
+        id: 4,
+        question: "단 음식이나 탄수화물이 강하게 당기나요?",
+        options: [
+          { text: "거의 없다", score: 0 },
+          { text: "가끔 있다", score: 1 },
+          { text: "자주 있다", score: 2 },
+          { text: "조절이 어렵다", score: 3 },
+        ],
+      },
+      {
+        id: 5,
+        question: "생리 전 피부 트러블이 늘어나나요?",
+        options: [
+          { text: "거의 없다", score: 0 },
+          { text: "가끔 있다", score: 1 },
+          { text: "매주기 반복된다", score: 2 },
+          { text: "심하게 올라온다", score: 3 },
+        ],
+      },
+      {
+        id: 6,
+        question: "생리 전 피로감이나 졸림이 심한가요?",
+        icon: "Moon",
+        options: [
+          { text: "평소와 비슷하다", score: 0 },
+          { text: "조금 피곤하다", score: 1 },
+          { text: "많이 피곤하다", score: 2 },
+          { text: "활동이 어렵다", score: 3 },
+        ],
+      },
+      {
+        id: 7,
+        question: "생리 주기가 규칙적인 편인가요?",
+        options: [
+          { text: "규칙적이다", score: 0 },
+          { text: "가끔 차이가 난다", score: 1 },
+          { text: "자주 불규칙하다", score: 2 },
+          { text: "예측하기 어렵다", score: 3 },
+        ],
+      },
+      {
+        id: 8,
+        question: "생리 전 예민함 때문에 관계나 업무에 영향이 있나요?",
+        options: [
+          { text: "거의 없다", score: 0 },
+          { text: "가끔 있다", score: 1 },
+          { text: "자주 있다", score: 2 },
+          { text: "매우 크다", score: 3 },
+        ],
+      },
+      {
+        id: 9,
+        question: "카페인, 음주, 짠 음식이 생리 전 늘어나나요?",
+        options: [
+          { text: "거의 늘지 않는다", score: 0 },
+          { text: "조금 늘어난다", score: 1 },
+          { text: "자주 늘어난다", score: 2 },
+          { text: "매번 크게 늘어난다", score: 3 },
+        ],
+      },
+      {
+        id: 10,
+        question: "생리 전 증상이 매달 반복되어 걱정되나요?",
+        options: [
+          { text: "걱정되지 않는다", score: 0 },
+          { text: "조금 신경 쓰인다", score: 1 },
+          { text: "꽤 걱정된다", score: 2 },
+          { text: "매달 큰 부담이다", score: 3 },
+        ],
+      },
+    ],
+    results: [
+      {
+        minScore: 0,
+        maxScore: 7,
+        title: "🟢 안정적인 주기 컨디션",
+        content: "생리 전 컨디션 변화가 비교적 안정적입니다. 현재의 생활 리듬을 유지하세요.",
+        recommendation: "가벼운 운동, 수면, 수분 섭취를 유지하고 생리 전 카페인과 짠 음식만 조금 조절해 보세요.",
+        product: {
+          name: "여궁골드",
+          desc: "여성 생애 주기별 맞춤 솔루션 제공",
+          cta: "여성 케어 보기",
+          url: "https://replyalba.com/pt/Z1IJI9rY2c",
+        }
+      },
+      {
+        minScore: 8,
+        maxScore: 14,
+        title: "🟡 PMS 관리 시작",
+        content: "생리 전 불편함이 반복되기 시작한 상태입니다. 증상 기록과 생활 조절이 도움이 됩니다.",
+        recommendation: "생리 7일 전부터 수면, 염분, 카페인, 당 섭취를 조절하고 증상 기록을 남겨 보세요.",
+        product: {
+          name: "여궁닥터",
+          desc: "민감한 부위의 냄새와 가려움을 말끔하게",
+          cta: "주기 케어 시작하기",
+          url: "https://replyalba.com/pt/IlnAem4ygW",
+        }
+      },
+      {
+        minScore: 15,
+        maxScore: 22,
+        title: "🟠 월경 전 컨디션 주의",
+        content: "감정, 통증, 붓기, 피로가 복합적으로 나타납니다. 월경 전 관리 루틴이 필요합니다.",
+        recommendation: "증상이 반복되면 산부인과 상담을 고려하세요. 평소에는 스트레스 관리와 가벼운 유산소 운동을 권합니다.",
+        product: {
+          name: "레이디큐어 솔루션",
+          desc: "여성만의 말 못할 고민, 근본부터 케어",
+          cta: "집중 케어 보기",
+          url: "https://replyalba.com/pt/WsdU9oMhje",
+        }
+      },
+      {
+        minScore: 23,
+        maxScore: 30,
+        title: "🔴 전문 상담 권장",
+        content: "PMS 증상이 일상에 큰 영향을 주는 수준입니다. 자가 관리만으로 버티지 않는 것이 좋습니다.",
+        recommendation: "통증, 우울감, 심한 감정 기복이 반복되면 전문 진료를 권합니다. 증상 기록을 가져가면 상담에 도움이 됩니다.",
+        product: {
+          name: "레이디큐어 솔루션 2",
+          desc: "더 당당해지는 나를 위한 시크릿 솔루션",
+          cta: "맞춤 케어 확인하기",
+          url: "https://replyalba.com/pt/z6pRyceT7w",
+        }
+      }
+    ]
+  },
+  "gut-constipation": {
+    title: "장 건강·변비 타입 테스트",
+    description: "배변 리듬, 식습관, 수분 섭취를 통해 나의 장 건강과 변비 타입을 확인해 보세요.",
+    questions: [
+      {
+        id: 1,
+        question: "배변은 얼마나 규칙적인가요?",
+        options: [
+          { text: "매일 규칙적이다", score: 0 },
+          { text: "대체로 규칙적이다", score: 1 },
+          { text: "2~3일에 한 번이다", score: 2 },
+          { text: "매우 불규칙하다", score: 3 },
+        ],
+      },
+      {
+        id: 2,
+        question: "배변 시 힘을 많이 주나요?",
+        options: [
+          { text: "거의 그렇지 않다", score: 0 },
+          { text: "가끔 그렇다", score: 1 },
+          { text: "자주 힘들다", score: 2 },
+          { text: "매번 힘들다", score: 3 },
+        ],
+      },
+      {
+        id: 3,
+        question: "복부 팽만감이나 가스가 잦나요?",
+        options: [
+          { text: "거의 없다", score: 0 },
+          { text: "가끔 있다", score: 1 },
+          { text: "자주 있다", score: 2 },
+          { text: "늘 더부룩하다", score: 3 },
+        ],
+      },
+      {
+        id: 4,
+        question: "물을 충분히 마시나요?",
+        icon: "Droplets",
+        options: [
+          { text: "충분히 마신다", score: 0 },
+          { text: "보통이다", score: 1 },
+          { text: "부족한 편이다", score: 2 },
+          { text: "거의 마시지 않는다", score: 3 },
+        ],
+      },
+      {
+        id: 5,
+        question: "채소, 과일, 해조류를 자주 먹나요?",
+        options: [
+          { text: "매일 충분히 먹는다", score: 0 },
+          { text: "자주 먹는다", score: 1 },
+          { text: "가끔 먹는다", score: 2 },
+          { text: "거의 먹지 않는다", score: 3 },
+        ],
+      },
+      {
+        id: 6,
+        question: "활동량이나 걷는 시간이 충분한가요?",
+        icon: "Activity",
+        options: [
+          { text: "충분하다", score: 0 },
+          { text: "보통이다", score: 1 },
+          { text: "부족한 편이다", score: 2 },
+          { text: "거의 움직이지 않는다", score: 3 },
+        ],
+      },
+      {
+        id: 7,
+        question: "스트레스를 받으면 장 컨디션이 흔들리나요?",
+        options: [
+          { text: "거의 없다", score: 0 },
+          { text: "가끔 있다", score: 1 },
+          { text: "자주 있다", score: 2 },
+          { text: "항상 영향을 받는다", score: 3 },
+        ],
+      },
+      {
+        id: 8,
+        question: "아침 식사를 거르는 편인가요?",
+        options: [
+          { text: "거의 거르지 않는다", score: 0 },
+          { text: "가끔 거른다", score: 1 },
+          { text: "자주 거른다", score: 2 },
+          { text: "거의 매일 거른다", score: 3 },
+        ],
+      },
+      {
+        id: 9,
+        question: "화장실 신호를 참는 일이 있나요?",
+        options: [
+          { text: "거의 없다", score: 0 },
+          { text: "가끔 있다", score: 1 },
+          { text: "자주 참는다", score: 2 },
+          { text: "일상적으로 참는다", score: 3 },
+        ],
+      },
+      {
+        id: 10,
+        question: "변비약이나 보조제에 의존하는 편인가요?",
+        options: [
+          { text: "거의 없다", score: 0 },
+          { text: "가끔 사용한다", score: 1 },
+          { text: "자주 사용한다", score: 2 },
+          { text: "없으면 불안하다", score: 3 },
+        ],
+      },
+    ],
+    results: [
+      {
+        minScore: 0,
+        maxScore: 7,
+        title: "🟢 규칙적인 장 리듬",
+        content: "장 건강과 배변 리듬이 안정적인 편입니다. 지금의 수분과 식이섬유 섭취를 유지하세요.",
+        recommendation: "아침 식사, 충분한 물, 가벼운 걷기를 유지하면 장 리듬을 더 안정적으로 지킬 수 있습니다.",
+        product: {
+          name: "공후하결",
+          desc: "피부 근본부터 채우는 프리미엄 영양 케어",
+          cta: "이너 케어 보기",
+          url: "https://replyalba.com/pt/UKfoQbTwGI",
+        }
+      },
+      {
+        minScore: 8,
+        maxScore: 14,
+        title: "🟡 식습관 조정형",
+        content: "수분, 식이섬유, 활동량 중 일부가 부족해 장 리듬이 흔들릴 수 있습니다.",
+        recommendation: "물을 조금씩 자주 마시고, 채소와 과일을 매일 추가하세요. 아침 배변 시간을 일정하게 만드는 것도 좋습니다.",
+        product: {
+          name: "천수애진2",
+          desc: "속부터 채워지는 윤기와 보습의 결정체",
+          cta: "이너뷰티 시작하기",
+          url: "https://replyalba.com/pt/PkcJmotCli",
+        }
+      },
+      {
+        minScore: 15,
+        maxScore: 22,
+        title: "🟠 변비 반복 주의",
+        content: "배변 불편과 복부 팽만이 반복되는 상태입니다. 생활 리듬과 식습관을 함께 조정해야 합니다.",
+        recommendation: "무리한 보조제 의존보다 수분, 식이섬유, 걷기, 화장실 신호에 바로 반응하는 습관을 먼저 회복하세요.",
+        product: {
+          name: "천수애진",
+          desc: "마시는 고함량 콜라겐으로 탱탱한 피부 재생",
+          cta: "장 리듬 케어 보기",
+          url: "https://replyalba.com/pt/SanlazetIb",
+        }
+      },
+      {
+        minScore: 23,
+        maxScore: 30,
+        title: "🔴 장 건강 상담 권장",
+        content: "변비와 복부 불편이 높은 수준입니다. 장기간 지속된다면 원인 확인이 필요합니다.",
+        recommendation: "혈변, 심한 복통, 급격한 체중 변화, 장기간 변비가 있으면 의료 상담을 받으세요. 생활 습관도 단계적으로 조정해야 합니다.",
+        product: {
+          name: "CR-5",
+          desc: "주름·기미·잡티 고민 한 번에 해결하세요",
+          cta: "집중 케어 확인하기",
+          url: "https://replyalba.com/pt/JNyIgk9t32",
+        }
+      }
+    ]
   }
 };

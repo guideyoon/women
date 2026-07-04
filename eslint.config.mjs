@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    "debug_scrape*.js",
+    "scrape.js",
+    "test_access.js",
   ]),
 ]);
 

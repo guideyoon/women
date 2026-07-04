@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Calculator, RotateCcw } from 'lucide-react';
 import { motion } from 'framer-motion';
+import DisclosureNotice from '@/components/DisclosureNotice';
 
 export default function CalculatorPage() {
   const [weight, setWeight] = useState('');
@@ -101,6 +102,8 @@ export default function CalculatorPage() {
           </motion.div>
         )}
       </div>
+
+      <DisclosureNotice className="mt-8" compact />
     </main>
   );
 }

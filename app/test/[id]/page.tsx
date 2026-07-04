@@ -2,10 +2,14 @@
 
 import { useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { QUIZ_DATA } from '@/constants/quizzes';
-import { ArrowRight, CheckCircle2, ArrowLeft, Clock, Info } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import DisclosureNotice from '@/components/DisclosureNotice';
+
+type Quiz = (typeof QUIZ_DATA)[keyof typeof QUIZ_DATA];
+type QuizQuestion = Quiz['questions'][number];
+type QuizOption = QuizQuestion['options'][number];
 
 export default function QuizPage() {
   const params = useParams();
@@ -84,12 +88,14 @@ export default function QuizPage() {
           >
             처음으로 돌아가기
           </button>
+
+          <DisclosureNotice compact />
         </motion.div>
       </main>
     );
   }
 
-  const currentQuestion = quiz.questions[currentStep] as any;
+  const currentQuestion: QuizQuestion = quiz.questions[currentStep];
   const progress = ((currentStep + 1) / quiz.questions.length) * 100;
 
   return (
@@ -122,7 +128,7 @@ export default function QuizPage() {
           </h2>
 
           <div className="grid gap-3">
-            {currentQuestion.options.map((option: any, index: number) => (
+            {currentQuestion.options.map((option: QuizOption, index: number) => (
               <button
                 key={index}
                 onClick={() => handleAnswer(option.score)}

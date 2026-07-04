@@ -1,18 +1,18 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { ChevronRight, Sparkles, Heart, Activity, Calculator, Moon, HeartHandshake, Stethoscope, Baby, Dumbbell, Shield, Apple } from "lucide-react";
 import { merchants } from "@/constants/merchants";
+import type { Merchant } from "@/constants/merchants";
+import DisclosureNotice from "@/components/DisclosureNotice";
+
+function getRandomMerchants(): Merchant[] {
+  return [...merchants].sort(() => 0.5 - Math.random()).slice(0, 3);
+}
 
 export default function Home() {
-  const [randomMerchants, setRandomMerchants] = useState<any[]>([]);
-
-  useEffect(() => {
-    // Randomly select 3 merchants
-    const shuffled = [...merchants].sort(() => 0.5 - Math.random());
-    setRandomMerchants(shuffled.slice(0, 3));
-  }, []);
+  const [randomMerchants] = useState(getRandomMerchants);
 
   const tests = [
     {
@@ -99,6 +99,55 @@ export default function Home() {
       icon: <Apple className="w-6 h-6 text-emerald-400" />,
       color: "bg-emerald-50",
     },
+    {
+      id: "hair-scalp",
+      title: "여성 탈모·두피 상태 테스트",
+      desc: "모발과 두피 컨디션을 점검해요",
+      icon: <Sparkles className="w-6 h-6 text-lime-500" />,
+      color: "bg-lime-50",
+    },
+    {
+      id: "leg-circulation",
+      title: "붓기·하체순환 테스트",
+      desc: "다리 붓기와 순환 상태는?",
+      icon: <Activity className="w-6 h-6 text-cyan-500" />,
+      color: "bg-cyan-50",
+    },
+    {
+      id: "diet-failure",
+      title: "다이어트 실패 원인 테스트",
+      desc: "감량을 막는 습관을 찾아요",
+      icon: <Dumbbell className="w-6 h-6 text-fuchsia-500" />,
+      color: "bg-fuchsia-50",
+    },
+    {
+      id: "dark-spot-risk",
+      title: "기미·잡티 위험도 테스트",
+      desc: "색소 고민 가능성을 확인해요",
+      icon: <Shield className="w-6 h-6 text-yellow-500" />,
+      color: "bg-yellow-50",
+    },
+    {
+      id: "sleep-stress",
+      title: "수면·스트레스 회복력 테스트",
+      desc: "회복 에너지 상태를 점검해요",
+      icon: <Moon className="w-6 h-6 text-indigo-500" />,
+      color: "bg-indigo-50",
+    },
+    {
+      id: "pms-condition",
+      title: "PMS·생리 전 컨디션 테스트",
+      desc: "주기 전 불편함을 체크해요",
+      icon: <Heart className="w-6 h-6 text-rose-500" />,
+      color: "bg-rose-50",
+    },
+    {
+      id: "gut-constipation",
+      title: "장 건강·변비 타입 테스트",
+      desc: "내 장 리듬과 타입은?",
+      icon: <Apple className="w-6 h-6 text-green-500" />,
+      color: "bg-green-50",
+    },
   ];
 
   const bannerStyles = [
@@ -177,6 +226,8 @@ export default function Home() {
           <div key={i} className="h-[200px] rounded-2xl bg-gray-100 animate-pulse" />
         ))}
       </section>
+
+      <DisclosureNotice className="mt-12" />
     </main>
   );
 }

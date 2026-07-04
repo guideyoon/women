@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, Heart } from 'lucide-react';
-import { cn } from '@/lib/utils';
 
 const navItems = [
   { name: '솔루션', href: '/solutions' },

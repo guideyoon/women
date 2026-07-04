@@ -70,7 +70,7 @@ export default function FortunePage() {
                 className="p-8 bg-white rounded-3xl border border-secondary card-shadow text-center w-full"
               >
                 <p className="text-xl font-medium text-gray-800 leading-relaxed italic">
-                  "{fortune}"
+                  &ldquo;{fortune}&rdquo;
                 </p>
                 <div className="mt-6 flex justify-center">
                   <button

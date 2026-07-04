@@ -1,3 +1,4 @@
+import { headers } from "next/headers";
 import { SITE_NAME, SITE_URL } from "@/constants/site";
 import { TEST_LINKS } from "@/constants/testLinks";
 
@@ -10,8 +11,14 @@ function escapeXml(value: string) {
     .replace(/'/g, "&apos;");
 }
 
-export function GET() {
+export async function GET() {
   const now = new Date().toUTCString();
+  const requestHeaders = await headers();
+  const host = requestHeaders.get("host");
+  const protocol = requestHeaders.get("x-forwarded-proto") || "https";
+  const feedSiteUrl =
+    host && host.endsWith("mizbalance.com") ? `${protocol}://${host}` : SITE_URL;
+
   const baseItems = [
     {
       title: SITE_NAME,
@@ -43,7 +50,7 @@ export function GET() {
 
   const items = [...baseItems, ...testItems]
     .map((item) => {
-      const url = `${SITE_URL}${item.path}`;
+      const url = `${feedSiteUrl}${item.path}`;
 
       return `
     <item>
@@ -60,7 +67,7 @@ export function GET() {
 <rss version="2.0">
   <channel>
     <title>${escapeXml(SITE_NAME)}</title>
-    <link>${escapeXml(SITE_URL)}</link>
+    <link>${escapeXml(feedSiteUrl)}</link>
     <description>여성 건강 자가진단 테스트와 맞춤 관리 정보를 제공하는 미즈 밸런스 RSS 피드입니다.</description>
     <language>ko-KR</language>
     <lastBuildDate>${now}</lastBuildDate>${items}

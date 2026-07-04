@@ -4,7 +4,24 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { QUIZ_DATA } from '@/constants/quizzes';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import {
+  Accessibility,
+  Activity,
+  ArrowRight,
+  BatteryLow,
+  Brain,
+  Calendar,
+  CheckCircle2,
+  Droplets,
+  Dumbbell,
+  Flame,
+  Heart,
+  HeartPulse,
+  Moon,
+  Shield,
+  Sparkles,
+  Wind,
+} from 'lucide-react';
 import DisclosureNotice from '@/components/DisclosureNotice';
 
 type Quiz = (typeof QUIZ_DATA)[keyof typeof QUIZ_DATA];
@@ -16,6 +33,141 @@ type QuizClientProps = {
   title: string;
   description: string;
 };
+
+const iconNames = new Set([
+  'Accessibility',
+  'Activity',
+  'BatteryLow',
+  'Brain',
+  'Calendar',
+  'Droplets',
+  'Dumbbell',
+  'Flame',
+  'Heart',
+  'HeartPulse',
+  'Moon',
+  'Shield',
+  'Sparkles',
+  'Wind',
+]);
+
+const quizIconMap: Partial<Record<keyof typeof QUIZ_DATA, string>> = {
+  chemistry: 'Heart',
+  'love-type': 'Heart',
+  'couple-fortune': 'Sparkles',
+  'lover-psychology': 'Brain',
+  bodyline: 'Activity',
+  'skin-age': 'Sparkles',
+  'skin-barrier': 'Shield',
+  'inner-beauty': 'Sparkles',
+  'hair-scalp': 'Sparkles',
+  'leg-circulation': 'Activity',
+  'diet-failure': 'Dumbbell',
+  'dark-spot-risk': 'Shield',
+  'gut-constipation': 'Activity',
+};
+
+const quizAccentMap: Partial<Record<keyof typeof QUIZ_DATA, string>> = {
+  chemistry: 'from-rose-50 via-pink-50 to-orange-50',
+  'love-type': 'from-rose-50 via-pink-50 to-red-50',
+  'couple-fortune': 'from-violet-50 via-rose-50 to-amber-50',
+  'lover-psychology': 'from-fuchsia-50 via-rose-50 to-orange-50',
+  'skin-age': 'from-pink-50 via-rose-50 to-orange-50',
+  'skin-barrier': 'from-sky-50 via-rose-50 to-pink-50',
+  bodyline: 'from-lime-50 via-rose-50 to-orange-50',
+  'leg-circulation': 'from-cyan-50 via-rose-50 to-pink-50',
+  'diet-failure': 'from-emerald-50 via-rose-50 to-orange-50',
+  'dark-spot-risk': 'from-amber-50 via-rose-50 to-pink-50',
+  'sleep-stress': 'from-indigo-50 via-rose-50 to-slate-50',
+  'gut-constipation': 'from-green-50 via-rose-50 to-orange-50',
+};
+
+function getQuestionIconName(question: QuizQuestion, quizId: keyof typeof QUIZ_DATA) {
+  const iconName = 'icon' in question ? question.icon : undefined;
+  const normalizedIconName = iconName ? String(iconName) : '';
+  return iconNames.has(normalizedIconName)
+    ? normalizedIconName
+    : quizIconMap[quizId] || 'HeartPulse';
+}
+
+function QuestionIcon({ name }: { name: string }) {
+  const className = "h-16 w-16 text-primary";
+  const strokeWidth = 1.7;
+
+  switch (name) {
+    case 'Accessibility':
+      return <Accessibility className={className} strokeWidth={strokeWidth} />;
+    case 'Activity':
+      return <Activity className={className} strokeWidth={strokeWidth} />;
+    case 'BatteryLow':
+      return <BatteryLow className={className} strokeWidth={strokeWidth} />;
+    case 'Brain':
+      return <Brain className={className} strokeWidth={strokeWidth} />;
+    case 'Calendar':
+      return <Calendar className={className} strokeWidth={strokeWidth} />;
+    case 'Droplets':
+      return <Droplets className={className} strokeWidth={strokeWidth} />;
+    case 'Dumbbell':
+      return <Dumbbell className={className} strokeWidth={strokeWidth} />;
+    case 'Flame':
+      return <Flame className={className} strokeWidth={strokeWidth} />;
+    case 'Heart':
+      return <Heart className={className} strokeWidth={strokeWidth} />;
+    case 'Moon':
+      return <Moon className={className} strokeWidth={strokeWidth} />;
+    case 'Shield':
+      return <Shield className={className} strokeWidth={strokeWidth} />;
+    case 'Sparkles':
+      return <Sparkles className={className} strokeWidth={strokeWidth} />;
+    case 'Wind':
+      return <Wind className={className} strokeWidth={strokeWidth} />;
+    default:
+      return <HeartPulse className={className} strokeWidth={strokeWidth} />;
+  }
+}
+
+function QuestionIllustration({
+  question,
+  quizId,
+  step,
+}: {
+  question: QuizQuestion;
+  quizId: keyof typeof QUIZ_DATA;
+  step: number;
+}) {
+  const iconName = getQuestionIconName(question, quizId);
+  const accent = quizAccentMap[quizId] || 'from-rose-50 via-pink-50 to-orange-50';
+  const figureOffset = step % 2 === 0 ? 'right-8' : 'left-8';
+  const panelOffset = step % 2 === 0 ? 'left-8' : 'right-8';
+
+  return (
+    <div
+      className={`relative h-48 sm:h-56 overflow-hidden rounded-3xl border border-rose-100 bg-gradient-to-br ${accent} card-shadow`}
+      aria-hidden="true"
+    >
+      <div className={`absolute top-8 ${panelOffset} h-28 w-36 rounded-2xl border border-white/80 bg-white/70 shadow-sm`} />
+      <div className={`absolute bottom-7 ${panelOffset} h-4 w-48 rounded-full bg-white/70`} />
+      <div className={`absolute bottom-14 ${panelOffset} h-4 w-28 rounded-full bg-primary/20`} />
+
+      <div className={`absolute top-8 ${figureOffset} flex h-32 w-32 items-center justify-center rounded-[2rem] border border-white/80 bg-white/85 shadow-sm`}>
+        <QuestionIcon name={iconName} />
+      </div>
+
+      <div className="absolute left-1/2 top-7 h-8 w-20 -translate-x-1/2 rounded-full bg-white/70" />
+      <div className="absolute left-1/2 top-20 h-3 w-40 -translate-x-1/2 rounded-full bg-white/60" />
+      <div className="absolute left-1/2 top-28 h-3 w-28 -translate-x-1/2 rounded-full bg-primary/20" />
+
+      <div className="absolute bottom-6 left-1/2 grid -translate-x-1/2 grid-cols-4 gap-2">
+        {[0, 1, 2, 3].map((item) => (
+          <span
+            key={item}
+            className={`h-8 w-8 rounded-xl border border-white/80 bg-white/70 ${item === step % 4 ? 'bg-primary/25' : ''}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function QuizClient({ quizId, title, description }: QuizClientProps) {
   const router = useRouter();
@@ -129,6 +281,12 @@ export default function QuizClient({ quizId, title, description }: QuizClientPro
         </div>
 
         <div className="space-y-6">
+          <QuestionIllustration
+            question={currentQuestion}
+            quizId={quizId}
+            step={currentStep}
+          />
+
           <h2 className="text-2xl font-bold text-gray-800 leading-tight">
             {currentQuestion.question}
           </h2>

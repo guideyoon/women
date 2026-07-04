@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { QUIZ_DATA } from '@/constants/quizzes';
 import { TEST_LINKS } from '@/constants/testLinks';
+import { absoluteUrl, SITE_NAME, SITE_URL } from '@/constants/site';
 import QuizClient from './QuizClient';
 
 type TestPageProps = {
@@ -9,8 +10,6 @@ type TestPageProps = {
     id: string;
   }>;
 };
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
 export function generateStaticParams() {
   return TEST_LINKS.map((test) => ({
@@ -29,12 +28,13 @@ export async function generateMetadata({ params }: TestPageProps): Promise<Metad
   }
 
   const url = `/test/${test.id}`;
-  const title = `${test.title} | 미즈 밸런스`;
+  const title = `${test.title} | ${SITE_NAME}`;
 
   return {
-    ...(siteUrl ? { metadataBase: new URL(siteUrl) } : {}),
+    metadataBase: new URL(SITE_URL),
     title,
     description: test.description,
+    keywords: [...test.keywords],
     alternates: {
       canonical: url,
     },
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: TestPageProps): Promise<Metad
       title,
       description: test.description,
       url,
-      siteName: '미즈 밸런스',
+      siteName: SITE_NAME,
       type: 'website',
       locale: 'ko_KR',
     },
@@ -56,10 +56,38 @@ export async function generateMetadata({ params }: TestPageProps): Promise<Metad
 
 export default async function QuizPage({ params }: TestPageProps) {
   const { id } = await params;
+  const test = TEST_LINKS.find((item) => item.id === id);
 
-  if (!(id in QUIZ_DATA)) {
+  if (!(id in QUIZ_DATA) || !test) {
     notFound();
   }
 
-  return <QuizClient quizId={id as keyof typeof QUIZ_DATA} />;
+  return (
+    <>
+      <QuizClient
+        quizId={id as keyof typeof QUIZ_DATA}
+        title={test.title}
+        description={test.description}
+      />
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: test.title,
+            description: test.description,
+            url: absoluteUrl(`/test/${test.id}`),
+            isPartOf: {
+              "@type": "WebSite",
+              name: SITE_NAME,
+              url: SITE_URL,
+            },
+            keywords: test.keywords.join(", "),
+          }),
+        }}
+      />
+    </>
+  );
 }

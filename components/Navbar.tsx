@@ -9,7 +9,6 @@ const navItems = [
   { name: '갱년기 테스트', href: '/test/menopause' },
   { name: '피부나이 테스트', href: '/test/skin-age' },
   { name: '칼로리 계산기', href: '/calculator' },
-  { name: '공유 링크', href: '/links' },
   { name: '운세', href: '/fortune' },
 ];
 

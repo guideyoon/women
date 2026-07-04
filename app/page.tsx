@@ -1,18 +1,12 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
 import { ChevronRight, Sparkles, Heart, Activity, Calculator, Moon, HeartHandshake, Stethoscope, Baby, Dumbbell, Shield, Apple } from "lucide-react";
 import { merchants } from "@/constants/merchants";
-import type { Merchant } from "@/constants/merchants";
 import DisclosureNotice from "@/components/DisclosureNotice";
-
-function getRandomMerchants(): Merchant[] {
-  return [...merchants].sort(() => 0.5 - Math.random()).slice(0, 3);
-}
+import { TEST_LINKS } from "@/constants/testLinks";
+import { absoluteUrl } from "@/constants/site";
 
 export default function Home() {
-  const [randomMerchants] = useState(getRandomMerchants);
+  const featuredMerchants = merchants.slice(0, 3);
 
   const tests = [
     {
@@ -158,18 +152,19 @@ export default function Home() {
 
   return (
     <main className="max-w-7xl mx-auto min-h-screen bg-background pb-20 px-4 sm:px-6 lg:px-8">
-      {/* Hero Section */}
       <header className="py-12 md:py-20 text-center">
         <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800">
-          <span className="text-primary">미즈 밸런스</span>
+          <span className="text-primary">여성 건강 자가진단 테스트</span>
         </h1>
-        <p className="text-lg text-gray-500 mt-4">오늘도 더 건강하고 아름다운 당신을 응원해요</p>
+        <p className="text-lg text-gray-500 mt-4 max-w-3xl mx-auto leading-relaxed">
+          갱년기, 피부 나이, 여성 탈모, 붓기, PMS, 장 건강까지 일상에서 느끼는
+          여성 컨디션을 간단한 문항으로 점검하고 관리 방향을 확인해 보세요.
+        </p>
       </header>
 
-      {/* Test Cards */}
       <section className="space-y-6">
         <h2 className="text-xl font-bold flex items-center gap-2">
-          오늘의 추천 테스트 <Sparkles className="w-5 h-5 text-amber-400 fill-amber-400" />
+          여성 컨디션 테스트 모음 <Sparkles className="w-5 h-5 text-amber-400 fill-amber-400" />
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {tests.map((test) => (
@@ -189,9 +184,32 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Banner Cards */}
+      <section className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="bg-white border border-secondary rounded-2xl p-6 card-shadow">
+          <h2 className="text-lg font-bold text-gray-800">내 몸의 변화를 빠르게 체크</h2>
+          <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+            안면홍조, 수면 변화, 피부 탄력, 붓기처럼 놓치기 쉬운 신호를 짧은 테스트로
+            확인할 수 있습니다.
+          </p>
+        </div>
+        <div className="bg-white border border-secondary rounded-2xl p-6 card-shadow">
+          <h2 className="text-lg font-bold text-gray-800">상황별 맞춤 관리 방향</h2>
+          <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+            결과 점수에 따라 생활 습관, 피부 관리, 이너뷰티, 여성 건강 관리 팁을
+            단계별로 안내합니다.
+          </p>
+        </div>
+        <div className="bg-white border border-secondary rounded-2xl p-6 card-shadow">
+          <h2 className="text-lg font-bold text-gray-800">검색하기 쉬운 테스트 주제</h2>
+          <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+            갱년기 테스트, PMS 테스트, 여성 탈모 테스트, 장 건강 테스트처럼 관심 있는
+            주제별로 바로 시작할 수 있습니다.
+          </p>
+        </div>
+      </section>
+
       <section className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-        {randomMerchants.map((merchant, index) => {
+        {featuredMerchants.map((merchant, index) => {
           const style = bannerStyles[index % bannerStyles.length];
           return (
             <Link
@@ -221,13 +239,26 @@ export default function Home() {
             </Link>
           );
         })}
-        {/* Skeleton loaders while loading random merchants */}
-        {randomMerchants.length === 0 && Array(3).fill(0).map((_, i) => (
-          <div key={i} className="h-[200px] rounded-2xl bg-gray-100 animate-pulse" />
-        ))}
       </section>
 
       <DisclosureNotice className="mt-12" />
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "여성 건강 자가진단 테스트 모음",
+            itemListElement: TEST_LINKS.map((test, index) => ({
+              "@type": "ListItem",
+              position: index + 1,
+              name: test.title,
+              url: absoluteUrl(`/test/${test.id}`),
+            })),
+          }),
+        }}
+      />
     </main>
   );
 }

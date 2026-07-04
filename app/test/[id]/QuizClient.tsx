@@ -13,9 +13,11 @@ type QuizOption = QuizQuestion['options'][number];
 
 type QuizClientProps = {
   quizId: keyof typeof QUIZ_DATA;
+  title: string;
+  description: string;
 };
 
-export default function QuizClient({ quizId }: QuizClientProps) {
+export default function QuizClient({ quizId, title, description }: QuizClientProps) {
   const router = useRouter();
   const quiz = QUIZ_DATA[quizId];
 
@@ -106,6 +108,12 @@ export default function QuizClient({ quizId }: QuizClientProps) {
         exit={{ opacity: 0, x: -20 }}
         className="pt-10 space-y-8"
       >
+        <header className="space-y-3">
+          <p className="text-sm font-bold text-primary">미즈 밸런스 자가진단</p>
+          <h1 className="text-3xl font-extrabold text-gray-800 leading-tight">{title}</h1>
+          <p className="text-gray-500 leading-relaxed">{description}</p>
+        </header>
+
         <div className="space-y-4">
           <div className="flex justify-end items-end gap-1">
             <span className="text-primary font-bold text-2xl">{currentStep + 1}</span>

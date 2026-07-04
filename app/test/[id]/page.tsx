@@ -1,147 +1,65 @@
-'use client';
-
-import { useState } from 'react';
-import { useParams, useRouter } from 'next/navigation';
-import { motion } from 'framer-motion';
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import { QUIZ_DATA } from '@/constants/quizzes';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
-import DisclosureNotice from '@/components/DisclosureNotice';
+import { TEST_LINKS } from '@/constants/testLinks';
+import QuizClient from './QuizClient';
 
-type Quiz = (typeof QUIZ_DATA)[keyof typeof QUIZ_DATA];
-type QuizQuestion = Quiz['questions'][number];
-type QuizOption = QuizQuestion['options'][number];
+type TestPageProps = {
+  params: Promise<{
+    id: string;
+  }>;
+};
 
-export default function QuizPage() {
-  const params = useParams();
-  const router = useRouter();
-  const quizId = params.id as keyof typeof QUIZ_DATA;
-  const quiz = QUIZ_DATA[quizId];
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
-  const [currentStep, setCurrentStep] = useState(0);
-  const [totalScore, setTotalScore] = useState(0);
-  const [isFinished, setIsFinished] = useState(false);
+export function generateStaticParams() {
+  return TEST_LINKS.map((test) => ({
+    id: test.id,
+  }));
+}
 
-  if (!quiz) return <div>페이지를 찾을 수 없습니다.</div>;
+export async function generateMetadata({ params }: TestPageProps): Promise<Metadata> {
+  const { id } = await params;
+  const test = TEST_LINKS.find((item) => item.id === id);
 
-  const handleAnswer = (score: number) => {
-    const nextScore = totalScore + score;
-    setTotalScore(nextScore);
-
-    if (currentStep < quiz.questions.length - 1) {
-      setCurrentStep(currentStep + 1);
-    } else {
-      setIsFinished(true);
-    }
-  };
-
-  const result = quiz.results.find(
-    (r) => totalScore >= r.minScore && totalScore <= r.maxScore
-  ) || quiz.results[0];
-
-  if (isFinished) {
-    return (
-      <main className="max-w-3xl mx-auto min-h-screen bg-background p-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="pt-10 space-y-8"
-        >
-          <div className="text-center space-y-2">
-            <span className="text-primary font-bold">진단 결과</span>
-            <h1 className="text-3xl font-extrabold text-gray-800">{result.title}</h1>
-            <p className="text-lg font-bold text-gray-500">내 점수: {totalScore}점</p>
-          </div>
-
-          <div className="bg-white rounded-3xl p-8 border border-secondary card-shadow space-y-6">
-            <p className="text-gray-600 leading-relaxed text-lg">
-              {result.content}
-            </p>
-
-            <div className="bg-pink-50 rounded-2xl p-5 border border-pink-100">
-              <h3 className="font-bold text-primary flex items-center gap-2 mb-2">
-                <CheckCircle2 className="w-5 h-5" /> 추천 관리 팁
-              </h3>
-              <p className="text-sm text-gray-700 whitespace-pre-line">{result.recommendation}</p>
-            </div>
-          </div>
-
-          {/* CPA Product Recommendation */}
-          <div className="bg-gradient-to-br from-rose-50 to-amber-50 rounded-3xl p-8 border border-rose-100 space-y-4">
-            <span className="text-xs font-bold text-rose-500 uppercase tracking-wider">Solution for you</span>
-            <div>
-              <h3 className="text-xl font-bold text-gray-800">{result.product.name}</h3>
-              <p className="text-gray-500 text-sm">{result.product.desc}</p>
-            </div>
-            <a
-              href={result.product.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full bg-primary text-white font-bold py-4 rounded-2xl shadow-lg shadow-rose-200 flex items-center justify-center gap-2 hover:bg-rose-600 transition-colors"
-            >
-              {result.product.cta} <ArrowRight className="w-5 h-5" />
-            </a>
-          </div>
-
-          <button
-            onClick={() => router.push('/')}
-            className="w-full text-gray-400 font-medium py-4"
-          >
-            처음으로 돌아가기
-          </button>
-
-          <DisclosureNotice compact />
-        </motion.div>
-      </main>
-    );
+  if (!test) {
+    return {
+      title: '테스트를 찾을 수 없습니다 | 미즈 밸런스',
+    };
   }
 
-  const currentQuestion: QuizQuestion = quiz.questions[currentStep];
-  const progress = ((currentStep + 1) / quiz.questions.length) * 100;
+  const url = `/test/${test.id}`;
+  const title = `${test.title} | 미즈 밸런스`;
 
-  return (
-    <main className="max-w-3xl mx-auto min-h-screen bg-background p-6">
-      <motion.div
-        key={currentStep}
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: -20 }}
-        className="pt-10 space-y-8"
-      >
-        {/* Progress */}
-        <div className="space-y-4">
-          <div className="flex justify-end items-end gap-1">
-            <span className="text-primary font-bold text-2xl">{currentStep + 1}</span>
-            <span className="text-gray-400 font-medium text-lg">/ {quiz.questions.length}</span>
-          </div>
-          <div className="h-2 bg-secondary rounded-full overflow-hidden">
-            <motion.div
-              className="h-full bg-primary"
-              initial={{ width: 0 }}
-              animate={{ width: `${progress}%` }}
-            />
-          </div>
-        </div>
+  return {
+    ...(siteUrl ? { metadataBase: new URL(siteUrl) } : {}),
+    title,
+    description: test.description,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title,
+      description: test.description,
+      url,
+      siteName: '미즈 밸런스',
+      type: 'website',
+      locale: 'ko_KR',
+    },
+    twitter: {
+      card: 'summary',
+      title,
+      description: test.description,
+    },
+  };
+}
 
-        <div className="space-y-6">
-          <h2 className="text-2xl font-bold text-gray-800 leading-tight">
-            {currentQuestion.question}
-          </h2>
+export default async function QuizPage({ params }: TestPageProps) {
+  const { id } = await params;
 
-          <div className="grid gap-3">
-            {currentQuestion.options.map((option: QuizOption, index: number) => (
-              <button
-                key={index}
-                onClick={() => handleAnswer(option.score)}
-                className="w-full p-5 text-left rounded-2xl border border-secondary hover:border-primary hover:bg-rose-50 transition-all group relative overflow-hidden bg-white card-shadow"
-              >
-                <span className="relative z-10 font-medium text-gray-700 group-hover:text-primary">
-                  {option.text}
-                </span>
-              </button>
-            ))}
-          </div>
-        </div>
-      </motion.div>
-    </main>
-  );
+  if (!(id in QUIZ_DATA)) {
+    notFound();
+  }
+
+  return <QuizClient quizId={id as keyof typeof QUIZ_DATA} />;
 }

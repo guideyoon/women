@@ -27,6 +27,9 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/",
+    types: {
+      "application/rss+xml": `${SITE_URL}/rss.xml`,
+    },
   },
   openGraph: {
     title: "미즈 밸런스 | 여성 건강 자가진단 테스트",

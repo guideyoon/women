@@ -6,6 +6,11 @@ import { SITE_NAME, SITE_URL } from "@/constants/site";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   applicationName: SITE_NAME,
+  verification: {
+    other: {
+      "naver-site-verification": "187061b6dbb783bd32c95184b8d7d51310b5c6d4",
+    },
+  },
   title: {
     default: "미즈 밸런스 | 여성 건강 자가진단 테스트",
     template: `%s | ${SITE_NAME}`,

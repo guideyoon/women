@@ -90,6 +90,33 @@ function getQuestionIconName(question: QuizQuestion, quizId: keyof typeof QUIZ_D
     : quizIconMap[quizId] || 'HeartPulse';
 }
 
+function getQuestionScene(question: QuizQuestion, quizId: keyof typeof QUIZ_DATA) {
+  const text = question.question;
+  const iconName = getQuestionIconName(question, quizId);
+
+  if (quizId === 'leg-circulation') return 'legs';
+  if (quizId === 'diet-failure') return /운동|활동량|근력/.test(text) ? 'activity' : 'diet';
+  if (quizId === 'hair-scalp') return 'hair';
+  if (quizId === 'gut-constipation') return 'gut';
+  if (quizId === 'bodyline') return 'bodyline';
+  if (quizId === 'postpartum') return 'recovery';
+
+  if (/얼굴|열|화끈|안면홍조|땀/.test(text) || iconName === 'Flame') return 'hot-flash';
+  if (/잠|수면|피로|졸림|회복|깨어/.test(text) || iconName === 'Moon' || iconName === 'BatteryLow') return 'sleep';
+  if (/기분|감정|불안|스트레스|예민|짜증/.test(text) || iconName === 'Brain') return 'mind';
+  if (/분비물|수분|건조|물|땀|냄새|가려움/.test(text) || iconName === 'Droplets') return 'droplets';
+  if (/주기|생리|PMS|월경|배란/.test(text) || iconName === 'Calendar') return 'cycle';
+  if (/관절|근육|통증|운동|활동량|걷/.test(text) || iconName === 'Activity' || iconName === 'Dumbbell') return 'activity';
+  if (/피부|주름|모공|탄력|장벽|기미|잡티|자외선|색소|트러블/.test(text) || quizId === 'skin-age' || quizId === 'skin-barrier' || quizId === 'dark-spot-risk') return 'skin';
+  if (/머리|모발|두피|탈모|가르마|빠짐/.test(text)) return 'hair';
+  if (/하체|다리|종아리|붓기|순환|부종/.test(text)) return 'legs';
+  if (/식사|야식|간식|체중|다이어트|감량|폭식|카페인/.test(text)) return 'diet';
+  if (/배변|장|변비|복부|가스|화장실/.test(text)) return 'gut';
+  if (/연인|커플|사랑|관계|궁합|만났|연락|데이트|파트너|섹스|스킨십/.test(text) || quizId === 'chemistry' || quizId === 'love-type' || quizId === 'couple-fortune' || quizId === 'lover-psychology') return 'relationship';
+
+  return 'wellness';
+}
+
 function QuestionIcon({ name }: { name: string }) {
   const className = "h-16 w-16 text-primary";
   const strokeWidth = 1.7;
@@ -126,6 +153,180 @@ function QuestionIcon({ name }: { name: string }) {
   }
 }
 
+function SceneArt({ scene, iconName }: { scene: string; iconName: string }) {
+  switch (scene) {
+    case 'hot-flash':
+      return (
+        <>
+          <div className="absolute left-12 top-11 h-28 w-24 rounded-[3rem] bg-white/90 shadow-sm">
+            <div className="absolute left-5 top-9 h-3 w-3 rounded-full bg-gray-700" />
+            <div className="absolute right-5 top-9 h-3 w-3 rounded-full bg-gray-700" />
+            <div className="absolute left-4 top-14 h-6 w-6 rounded-full bg-primary/35" />
+            <div className="absolute right-4 top-14 h-6 w-6 rounded-full bg-primary/35" />
+            <div className="absolute left-9 top-20 h-1.5 w-7 rounded-full bg-gray-700/60" />
+          </div>
+          <div className="absolute right-16 top-11 flex h-24 w-24 items-center justify-center rounded-full bg-white/85 shadow-sm">
+            <Flame className="h-14 w-14 text-primary" strokeWidth={1.8} />
+          </div>
+          <div className="absolute right-10 top-24 h-12 w-2 rounded-full bg-primary/25" />
+          <div className="absolute right-28 top-28 h-10 w-2 rounded-full bg-primary/20" />
+        </>
+      );
+    case 'sleep':
+      return (
+        <>
+          <div className="absolute left-10 bottom-12 h-20 w-56 rounded-3xl bg-white/85 shadow-sm" />
+          <div className="absolute left-12 bottom-20 h-16 w-20 rounded-2xl bg-primary/15" />
+          <div className="absolute left-28 bottom-20 h-6 w-32 rounded-full bg-white" />
+          <Moon className="absolute right-16 top-10 h-16 w-16 text-indigo-400" strokeWidth={1.8} />
+          <div className="absolute right-24 top-28 h-3 w-20 rounded-full bg-indigo-100" />
+        </>
+      );
+    case 'mind':
+      return (
+        <>
+          <div className="absolute left-12 top-11 h-28 w-28 rounded-[2.5rem] bg-white/85 shadow-sm" />
+          <Brain className="absolute left-20 top-20 h-16 w-16 text-primary" strokeWidth={1.7} />
+          <div className="absolute right-16 top-12 h-16 w-36 rounded-3xl bg-white/75 shadow-sm" />
+          <div className="absolute right-20 top-32 h-4 w-28 rounded-full bg-primary/20" />
+          <div className="absolute right-28 top-40 h-4 w-16 rounded-full bg-white/80" />
+        </>
+      );
+    case 'droplets':
+      return (
+        <>
+          <div className="absolute left-12 top-10 h-32 w-28 rounded-[2rem] bg-white/85 shadow-sm" />
+          <Droplets className="absolute left-20 top-22 h-16 w-16 text-sky-400" strokeWidth={1.7} />
+          <div className="absolute right-14 top-11 h-28 w-24 rounded-[2rem] border border-sky-100 bg-sky-50/80" />
+          <div className="absolute right-24 top-20 h-16 w-3 rounded-full bg-sky-300/50" />
+          <div className="absolute right-18 top-30 h-10 w-3 rounded-full bg-sky-300/35" />
+        </>
+      );
+    case 'cycle':
+      return (
+        <>
+          <div className="absolute left-12 top-10 h-32 w-32 rounded-[2rem] bg-white/85 shadow-sm" />
+          <Calendar className="absolute left-20 top-18 h-16 w-16 text-primary" strokeWidth={1.8} />
+          <div className="absolute right-16 top-12 grid grid-cols-3 gap-2 rounded-2xl bg-white/70 p-4 shadow-sm">
+            {[0, 1, 2, 3, 4, 5].map((item) => (
+              <span key={item} className={`h-8 w-8 rounded-xl ${item === 3 ? 'bg-primary/35' : 'bg-white/90'}`} />
+            ))}
+          </div>
+        </>
+      );
+    case 'activity':
+      return (
+        <>
+          <div className="absolute left-12 top-11 h-32 w-28 rounded-[2rem] bg-white/85 shadow-sm" />
+          <Activity className="absolute left-20 top-23 h-16 w-16 text-emerald-500" strokeWidth={1.8} />
+          <div className="absolute right-14 top-14 h-24 w-24 rounded-full border-[10px] border-emerald-100" />
+          <Dumbbell className="absolute right-21 top-28 h-14 w-14 text-primary" strokeWidth={1.8} />
+        </>
+      );
+    case 'skin':
+      return (
+        <>
+          <div className="absolute left-12 top-10 h-32 w-28 rounded-[2rem] bg-white/90 shadow-sm">
+            <div className="absolute left-7 top-10 h-2.5 w-2.5 rounded-full bg-amber-300" />
+            <div className="absolute right-7 top-14 h-2 w-2 rounded-full bg-rose-300" />
+            <div className="absolute left-8 top-24 h-1.5 w-14 rounded-full bg-primary/30" />
+          </div>
+          <Shield className="absolute right-22 top-14 h-20 w-20 text-primary" strokeWidth={1.6} />
+          <Sparkles className="absolute right-14 top-30 h-12 w-12 text-amber-400" strokeWidth={1.7} />
+        </>
+      );
+    case 'hair':
+      return (
+        <>
+          <div className="absolute left-12 top-12 h-28 w-28 rounded-[3rem] bg-white/90 shadow-sm" />
+          <div className="absolute left-17 top-8 h-16 w-18 rounded-t-full bg-gray-700/80" />
+          <div className="absolute left-23 top-13 h-24 w-1.5 rounded-full bg-white/70" />
+          <Sparkles className="absolute right-18 top-14 h-20 w-20 text-primary" strokeWidth={1.7} />
+          <div className="absolute right-13 top-33 h-3 w-28 rounded-full bg-primary/20" />
+        </>
+      );
+    case 'legs':
+      return (
+        <svg className="absolute inset-0 h-full w-full" viewBox="0 0 720 224" role="img">
+          <ellipse cx="360" cy="184" rx="250" ry="18" fill="rgba(255,255,255,0.55)" />
+          <rect x="155" y="42" width="58" height="116" rx="29" fill="white" opacity="0.92" />
+          <rect x="230" y="42" width="58" height="116" rx="29" fill="white" opacity="0.92" />
+          <ellipse cx="180" cy="160" rx="44" ry="18" fill="rgba(255,138,128,0.2)" />
+          <ellipse cx="258" cy="160" rx="44" ry="18" fill="rgba(255,138,128,0.2)" />
+          <path d="M420 70c50-42 118-18 122 40 3 45-40 69-82 50" fill="none" stroke="#67e8f9" strokeWidth="12" strokeLinecap="round" />
+          <path d="M452 58l-36 10 13 34" fill="none" stroke="#67e8f9" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M456 143c-18-5-35-15-48-32" fill="none" stroke="#ff8a80" strokeWidth="8" strokeLinecap="round" />
+          <circle cx="500" cy="107" r="8" fill="#ff8a80" opacity="0.7" />
+          <circle cx="525" cy="128" r="6" fill="#ff8a80" opacity="0.45" />
+        </svg>
+      );
+    case 'diet':
+      return (
+        <svg className="absolute inset-0 h-full w-full" viewBox="0 0 720 224" role="img">
+          <ellipse cx="360" cy="184" rx="250" ry="18" fill="rgba(255,255,255,0.55)" />
+          <circle cx="210" cy="112" r="62" fill="white" opacity="0.92" />
+          <circle cx="210" cy="112" r="42" fill="#ecfdf5" />
+          <ellipse cx="195" cy="112" rx="20" ry="13" fill="#86efac" />
+          <ellipse cx="225" cy="105" rx="18" ry="12" fill="#fdba74" />
+          <ellipse cx="230" cy="128" rx="24" ry="10" fill="#fda4af" opacity="0.75" />
+          <path d="M112 70v84M100 70v28M112 70v28M124 70v28" stroke="#94a3b8" strokeWidth="7" strokeLinecap="round" />
+          <path d="M302 72v82" stroke="#94a3b8" strokeWidth="9" strokeLinecap="round" />
+          <path d="M302 72c23 12 23 42 0 56" fill="none" stroke="#94a3b8" strokeWidth="7" strokeLinecap="round" />
+          <circle cx="505" cy="104" r="54" fill="white" opacity="0.9" />
+          <circle cx="505" cy="104" r="36" fill="none" stroke="#ff8a80" strokeWidth="8" />
+          <path d="M505 82v25l22 12" stroke="#ff8a80" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M456 166h98" stroke="rgba(255,255,255,0.9)" strokeWidth="12" strokeLinecap="round" />
+        </svg>
+      );
+    case 'gut':
+      return (
+        <>
+          <div className="absolute left-12 top-10 h-32 w-32 rounded-[2.5rem] bg-white/90 shadow-sm" />
+          <div className="absolute left-22 top-21 h-16 w-16 rounded-[2rem] border-[8px] border-orange-200" />
+          <div className="absolute left-29 top-28 h-8 w-8 rounded-full border-[6px] border-primary/50" />
+          <Droplets className="absolute right-17 top-16 h-18 w-18 text-sky-400" strokeWidth={1.7} />
+          <div className="absolute right-14 top-36 h-3 w-32 rounded-full bg-green-100" />
+        </>
+      );
+    case 'relationship':
+      return (
+        <>
+          <div className="absolute left-12 top-12 h-24 w-24 rounded-[2rem] bg-white/85 shadow-sm" />
+          <div className="absolute right-12 top-12 h-24 w-24 rounded-[2rem] bg-white/85 shadow-sm" />
+          <Heart className="absolute left-1/2 top-20 h-18 w-18 -translate-x-1/2 text-primary" strokeWidth={1.8} />
+          <div className="absolute left-20 bottom-12 h-3 w-44 rounded-full bg-primary/20" />
+          <div className="absolute right-20 bottom-18 h-3 w-32 rounded-full bg-white/80" />
+        </>
+      );
+    case 'bodyline':
+      return (
+        <>
+          <div className="absolute left-18 top-8 h-36 w-24 rounded-[3rem] border-[10px] border-white/90 bg-lime-50 shadow-sm" />
+          <div className="absolute left-24 top-20 h-22 w-12 rounded-full bg-primary/20" />
+          <Activity className="absolute right-18 top-18 h-18 w-18 text-lime-500" strokeWidth={1.8} />
+          <div className="absolute right-14 top-37 h-4 w-28 rounded-full bg-white/75" />
+        </>
+      );
+    case 'recovery':
+      return (
+        <>
+          <div className="absolute left-12 top-12 h-28 w-28 rounded-[2.5rem] bg-white/90 shadow-sm" />
+          <HeartPulse className="absolute left-20 top-22 h-16 w-16 text-primary" strokeWidth={1.7} />
+          <div className="absolute right-14 top-12 h-28 w-28 rounded-full bg-rose-100/60" />
+          <Sparkles className="absolute right-22 top-23 h-14 w-14 text-amber-400" strokeWidth={1.7} />
+        </>
+      );
+    default:
+      return (
+        <>
+          <div className="absolute left-12 top-11 h-28 w-32 rounded-[2rem] bg-white/85 shadow-sm" />
+          <QuestionIcon name={iconName} />
+          <div className="absolute right-14 top-14 h-24 w-24 rounded-full bg-white/80 shadow-sm" />
+        </>
+      );
+  }
+}
+
 function QuestionIllustration({
   question,
   quizId,
@@ -136,32 +337,22 @@ function QuestionIllustration({
   step: number;
 }) {
   const iconName = getQuestionIconName(question, quizId);
+  const scene = getQuestionScene(question, quizId);
   const accent = quizAccentMap[quizId] || 'from-rose-50 via-pink-50 to-orange-50';
-  const figureOffset = step % 2 === 0 ? 'right-8' : 'left-8';
-  const panelOffset = step % 2 === 0 ? 'left-8' : 'right-8';
 
   return (
     <div
       className={`relative h-48 sm:h-56 overflow-hidden rounded-3xl border border-rose-100 bg-gradient-to-br ${accent} card-shadow`}
       aria-hidden="true"
     >
-      <div className={`absolute top-8 ${panelOffset} h-28 w-36 rounded-2xl border border-white/80 bg-white/70 shadow-sm`} />
-      <div className={`absolute bottom-7 ${panelOffset} h-4 w-48 rounded-full bg-white/70`} />
-      <div className={`absolute bottom-14 ${panelOffset} h-4 w-28 rounded-full bg-primary/20`} />
+      <div className="absolute inset-x-8 bottom-8 h-8 rounded-full bg-white/50 blur-md" />
+      <SceneArt scene={scene} iconName={iconName} />
 
-      <div className={`absolute top-8 ${figureOffset} flex h-32 w-32 items-center justify-center rounded-[2rem] border border-white/80 bg-white/85 shadow-sm`}>
-        <QuestionIcon name={iconName} />
-      </div>
-
-      <div className="absolute left-1/2 top-7 h-8 w-20 -translate-x-1/2 rounded-full bg-white/70" />
-      <div className="absolute left-1/2 top-20 h-3 w-40 -translate-x-1/2 rounded-full bg-white/60" />
-      <div className="absolute left-1/2 top-28 h-3 w-28 -translate-x-1/2 rounded-full bg-primary/20" />
-
-      <div className="absolute bottom-6 left-1/2 grid -translate-x-1/2 grid-cols-4 gap-2">
+      <div className={`absolute ${step % 2 === 0 ? 'right-8' : 'left-8'} bottom-6 grid grid-cols-4 gap-2`}>
         {[0, 1, 2, 3].map((item) => (
           <span
             key={item}
-            className={`h-8 w-8 rounded-xl border border-white/80 bg-white/70 ${item === step % 4 ? 'bg-primary/25' : ''}`}
+            className={`h-4 w-4 rounded-full border border-white/80 bg-white/70 ${item === step % 4 ? 'bg-primary/45' : ''}`}
           />
         ))}
       </div>

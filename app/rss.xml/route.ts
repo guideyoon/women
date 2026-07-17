@@ -37,7 +37,7 @@ export async function GET() {
     },
     {
       title: "오늘의 운세",
-      description: "간단한 생년월일 입력으로 오늘의 흐름을 확인하세요.",
+      description: "버튼을 눌러 오늘의 행운 메시지를 확인하세요.",
       path: "/fortune",
     },
   ];

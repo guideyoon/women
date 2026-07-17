@@ -66,7 +66,7 @@ export default async function QuizPage({ params }: TestPageProps) {
   return (
     <>
       <QuizClient
-        quizId={id as keyof typeof QUIZ_DATA}
+        quiz={QUIZ_DATA[id as keyof typeof QUIZ_DATA]}
         title={test.title}
         description={test.description}
       />

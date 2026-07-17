@@ -3,23 +3,21 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { QUIZ_DATA } from '@/constants/quizzes';
+import type { Quiz } from '@/constants/quizzes';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import DisclosureNotice from '@/components/DisclosureNotice';
 
-type Quiz = (typeof QUIZ_DATA)[keyof typeof QUIZ_DATA];
 type QuizQuestion = Quiz['questions'][number];
 type QuizOption = QuizQuestion['options'][number];
 
 type QuizClientProps = {
-  quizId: keyof typeof QUIZ_DATA;
+  quiz: Quiz;
   title: string;
   description: string;
 };
 
-export default function QuizClient({ quizId, title, description }: QuizClientProps) {
+export default function QuizClient({ quiz, title, description }: QuizClientProps) {
   const router = useRouter();
-  const quiz = QUIZ_DATA[quizId];
 
   const [currentStep, setCurrentStep] = useState(0);
   const [totalScore, setTotalScore] = useState(0);

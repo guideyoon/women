@@ -2925,3 +2925,6 @@ export const QUIZ_DATA = {
     ]
   }
 };
+
+export type QuizId = keyof typeof QUIZ_DATA;
+export type Quiz = (typeof QUIZ_DATA)[QuizId];

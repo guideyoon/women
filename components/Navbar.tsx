@@ -44,6 +44,10 @@ export default function Navbar() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-600 hover:text-primary p-2"
+              type="button"
+              aria-label={isOpen ? '메뉴 닫기' : '메뉴 열기'}
+              aria-expanded={isOpen}
+              aria-controls="mobile-navigation"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -53,7 +57,10 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-secondary py-4 px-4 space-y-2">
+        <div
+          id="mobile-navigation"
+          className="md:hidden bg-white border-t border-secondary py-4 px-4 space-y-2"
+        >
           {navItems.map((item) => (
             <Link
               key={item.name}

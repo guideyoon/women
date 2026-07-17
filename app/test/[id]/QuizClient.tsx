@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import type { Quiz } from '@/constants/quizzes';
@@ -23,6 +23,12 @@ export default function QuizClient({ quiz, title, description }: QuizClientProps
   const [totalScore, setTotalScore] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
 
+  useEffect(() => {
+    if (isFinished) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [isFinished]);
+
   const handleAnswer = (score: number) => {
     const nextScore = totalScore + score;
     setTotalScore(nextScore);
@@ -40,33 +46,26 @@ export default function QuizClient({ quiz, title, description }: QuizClientProps
 
   if (isFinished) {
     return (
-      <main className="max-w-3xl mx-auto min-h-screen bg-background p-6">
+      <main className="max-w-3xl mx-auto min-h-screen bg-background px-4 py-5 sm:p-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="pt-10 space-y-8"
+          className="space-y-5 sm:pt-6 sm:space-y-8"
         >
-          <div className="text-center space-y-2">
-            <span className="text-primary font-bold">진단 결과</span>
-            <h1 className="text-3xl font-extrabold text-gray-800">{result.title}</h1>
-            <p className="text-lg font-bold text-gray-500">내 점수: {totalScore}점</p>
-          </div>
-
-          <div className="bg-white rounded-3xl p-8 border border-secondary card-shadow space-y-6">
-            <p className="text-gray-600 leading-relaxed text-lg">
-              {result.content}
-            </p>
-
-            <div className="bg-pink-50 rounded-2xl p-5 border border-pink-100">
-              <h3 className="font-bold text-primary flex items-center gap-2 mb-2">
-                <CheckCircle2 className="w-5 h-5" /> 추천 관리 팁
-              </h3>
-              <p className="text-sm text-gray-700 whitespace-pre-line">{result.recommendation}</p>
+          <div className="text-center space-y-1 sm:space-y-2">
+            <div className="flex items-center justify-center gap-3 text-sm font-bold">
+              <span className="text-primary">진단 결과</span>
+              <span className="text-gray-400">내 점수 {totalScore}점</span>
             </div>
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-800">
+              {result.title}
+            </h1>
           </div>
 
-          <div className="bg-gradient-to-br from-rose-50 to-amber-50 rounded-3xl p-8 border border-rose-100 space-y-4">
-            <span className="text-xs font-bold text-rose-500 uppercase tracking-wider">Solution for you</span>
+          <div className="bg-gradient-to-br from-rose-50 to-amber-50 rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-rose-100 space-y-3 sm:space-y-4">
+            <span className="text-xs font-bold text-rose-500 uppercase tracking-wider">
+              지금 확인할 맞춤 솔루션
+            </span>
             <div>
               <h3 className="text-xl font-bold text-gray-800">{result.product.name}</h3>
               <p className="text-gray-500 text-sm">{result.product.desc}</p>
@@ -74,11 +73,24 @@ export default function QuizClient({ quiz, title, description }: QuizClientProps
             <a
               href={result.product.url}
               target="_blank"
-              rel="noopener noreferrer"
-              className="w-full bg-primary text-white font-bold py-4 rounded-2xl shadow-lg shadow-rose-200 flex items-center justify-center gap-2 hover:bg-rose-600 transition-colors"
+              rel="noopener noreferrer sponsored"
+              className="w-full bg-primary text-white font-bold py-3 sm:py-4 rounded-xl sm:rounded-2xl shadow-lg shadow-rose-200 flex items-center justify-center gap-2 hover:bg-rose-600 transition-colors"
             >
               {result.product.cta} <ArrowRight className="w-5 h-5" />
             </a>
+          </div>
+
+          <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-secondary card-shadow space-y-4 sm:space-y-6">
+            <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
+              {result.content}
+            </p>
+
+            <div className="bg-pink-50 rounded-2xl p-4 sm:p-5 border border-pink-100">
+              <h3 className="font-bold text-primary flex items-center gap-2 mb-2">
+                <CheckCircle2 className="w-5 h-5" /> 추천 관리 팁
+              </h3>
+              <p className="text-sm text-gray-700 whitespace-pre-line">{result.recommendation}</p>
+            </div>
           </div>
 
           <button
